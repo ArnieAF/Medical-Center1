@@ -1,0 +1,215 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  width: 100%;
+  background: #ffffff;
+  padding: 45px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo img{
+  width: 233px;
+  height: 72px;
+}
+
+
+
+/* NAV MENU */
+.nav {
+  display: flex;
+  gap: 25px;
+  
+}
+
+.nav a {
+  text-decoration: none;
+  color: #173F72;
+  font-size: 15px;
+  font-weight: medium;
+}
+
+.nav a.active {
+  color: #6fbf73;
+}
+
+/* BOTÓN AGENDA */
+.btn-cita {
+  width: 262px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: linear-gradient(90deg, #1D405F, #C1DD9E);
+  border-radius: 20px;
+
+  
+  text-decoration: none;
+  color: white;
+  font-weight: 750;
+  font-size: 18px;
+}
+
+.btn-cita img {
+  width: 20px; /* ajustable si lo deseas */
+  height: 20px;
+}
+
+
+/* HERO */
+.hero-nosotros {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: extra-bold;
+  color: #C1DD9E;
+}
+
+.hero-text p {
+  margin-top: 30px;
+  font-size: 25px;
+  font-weight: mediums;
+}
+
+
+/* SECCIÓN NUESTRO PROPÓSITO */
+.proposito {
+  width: 90%;
+  max-width: 1200px;
+  margin: 70px auto;
+}
+
+.proposito h2 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: extra-bold;
+  color: #1E5542; /* luego tú ajustas el color */
+  margin-bottom: 50px;
+}
+
+.proposito-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.proposito-text {
+  width: 50%;
+  font-size: 25px;
+  font-weight: mixted;
+  line-height: 1.6;
+  color: #173F72;
+}
+
+.proposito-text strong {
+  font-weight: medium;
+  color: #1E5542;
+}
+
+.proposito-img {
+  width: 50%;
+}
+
+.proposito-img img {
+  width: 100%;
+  border-radius: 10px; /* si lo quieres recto, lo quitas */
+}
+
+
+/* VALORES */
+.valores {
+  width: 100%;
+  padding: 70px 0;
+  background: linear-gradient(90deg, #C1DD9E, #1E5542, #173F72);
+  text-align: center;
+}
+
+.valores h2 {
+  color: white;
+  font-size: 45px;
+  font-weight: extra-bold;
+  margin-bottom: 50px;
+  
+}
+
+.valores-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 130px;
+}
+.valor img {
+  height: 120px;     /* todas las imágenes medirán lo mismo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.valor {
+  
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.valor p {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.valor.cercania {
+  transform: translateX(-31px);
+}
+
+.valor .atencion {
+  transform: translateX(-31px);
+}
+
+
