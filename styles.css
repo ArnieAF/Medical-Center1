@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  width: 100%;
+  background: #ffffff;
+  padding: 45px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo img{
+  width: 233px;
+  height: 72px;
+}
+
+
+
+/* NAV MENU */
+.nav {
+  display: flex;
+  gap: 25px;
+  
+}
+
+.nav a {
+  text-decoration: none;
+  color: #173F72;
+  font-size: 15px;
+  font-weight: medium;
+}
+
+.nav a.active {
+  color: #6fbf73;
+}
+
+/* BOTÓN AGENDA */
+.btn-cita {
+  width: 262px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: linear-gradient(90deg, #1D405F, #C1DD9E);
+  border-radius: 20px;
+
+  
+  text-decoration: none;
+  color: white;
+  font-weight: 750;
+  font-size: 18px;
+}
+
+.btn-cita img {
+  width: 20px; /* ajustable si lo deseas */
+  height: 20px;
+}
+
