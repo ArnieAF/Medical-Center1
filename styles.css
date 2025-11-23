@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  width: 100%;
+  background: #ffffff;
+  padding: 45px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo img{
+  width: 233px;
+  height: 72px;
+}
+
+
+
+/* NAV MENU */
+.nav {
+  display: flex;
+  gap: 25px;
+  
+}
+
+.nav a {
+  text-decoration: none;
+  color: #173F72;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.nav a.active {
+  color: #1E5542;
+}
+
+/* BOTÓN AGENDA */
+.btn-cita {
+  width: 262px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #1D405F, #C1DD9E);
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+
+}
+
+.btn-cita img {
+  width: 20px; /* ajustable si lo deseas */
+  height: 20px;
+}
+
+.doctor-inicio{
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+}
+
+.doctor-img{
+     width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+
+}
+
+.doctor-text{
+    width: 60%;
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+
+.color-blanco{
+    font-size: 60px;
+  font-weight: extra-bold;
+  color: #ffffff;
+}
+
+.color-azul{
+    font-size: 60px;    
+  font-weight: extra-bold;
+  color: #C1DD9E;
+}
+.doctor-text p {
+  margin-top: 50px;
+  font-size: 25px;
+  font-style: medium;
+  font-weight: 500;
+}
+.btn-especialidades {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(to right, #1E5542, #C1DD9E);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 100%;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+    margin-top: 50px;
+}
+
