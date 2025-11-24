@@ -134,3 +134,83 @@ position: absolute;
     margin-top: 50px;
 }
 
+/* =============================
+   SECCIÓN ¿QUIÉNES SOMOS?
+   ============================= */
+
+.about {
+  position: relative;  /* para posicionar la imagen dentro *//* GRADIENTE MÁS CERCANO AL FIGMA */
+background: linear-gradient(
+  165.49deg,
+  #489C9C 21.21%,
+  #173F72 78.79%
+);
+
+  min-height: 485px;   /* altura similar al frame del Figma */
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Contenedor del texto */
+.about-content {
+  max-width: 1440px;
+  margin: 10px 25px;
+  padding: 60px 60px 40px;  /* arriba, lados, un poco abajo */
+}
+
+.about-content h2 {
+  font-size: 50px;
+  font-weight: 800;
+  font-style: bolder;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+  letter-spacing: 0%;
+}
+
+.about-content p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 18px;
+  width: 40%;
+}
+
+.about-content .especialidad {
+  color: #C1DD9E;   /* verde de las especialidades */
+  font-weight: 700;
+}
+
+/* Imagen de doctores: pegada abajo a la derecha */
+.about-img {
+  position: absolute;
+  right: 1px;       /* mismo margen que el texto a la izquierda */
+  bottom: 0;         /* pegado al final del gradiente */
+  height: 500px;     /* AJUSTA este valor si la quieres un poco más grande/pequeña */
+  width: auto;
+  display: inline-block;
+  margin-bottom: -8px;
+}
+
+/* =============================
+   Responsive
+   ============================= */
+
+@media (max-width: 900px) {
+  .about {
+    min-height: auto;
+    padding-bottom: 260px; /* espacio para que quepa la imagen */
+  }
+
+  .about-content {
+    padding: 40px 24px;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-img {
+    right: 50%;
+    transform: translateX(50%);
+    height: 280px;
+  }
+}
