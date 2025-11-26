@@ -67,6 +67,7 @@ header {
   color: white;
   font-weight: 800;
   font-size: 18px;
+  line-height: 100%;
 
 }
 
@@ -99,13 +100,23 @@ position: absolute;
   text-align: center;
   color: white;
   margin-top: 30px;
+  
 }
+
+/* Sombras al texto del hero */
+.color-blanco,
+.color-azul,
+.btn-especialidades {
+  text-shadow: 0px 2px 4px #00000033;  /* misma sombra que usas en Figma */
+}
+
 
 
 .color-blanco{
     font-size: 60px;
   font-weight: extra-bold;
   color: #ffffff;
+  
 }
 
 .color-azul{
@@ -118,6 +129,7 @@ position: absolute;
   font-size: 25px;
   font-style: medium;
   font-weight: 500;
+  line-height: 100%;
 }
 .btn-especialidades {
   display: inline-block;
@@ -132,8 +144,27 @@ position: absolute;
   border-radius: 20px;
   transition: background-color 0.3s ease;
     margin-top: 50px;
+    box-shadow: 0px 4px 4px 0px #00000033;
+
 }
 
+.btn-vermas{
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #1E5542, #C1DD9E);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: bold  ;
+  letter-spacing: 0;
+  line-height: 100%;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+   margin-top: 10px;
+   box-shadow: 0px 4px 4px 0px #00000033;
+
+}
 /* =============================
    SECCIÓN ¿QUIÉNES SOMOS?
    ============================= */
@@ -156,6 +187,8 @@ background: linear-gradient(
   max-width: 1440px;
   margin: 10px 25px;
   padding: 60px 60px 40px;  /* arriba, lados, un poco abajo */
+    text-shadow: 0px 2px 4px #00000033;  /* misma sombra que usas en Figma */
+
 }
 
 .about-content h2 {
@@ -165,6 +198,8 @@ background: linear-gradient(
   letter-spacing: 0;
   margin-bottom: 24px;
   letter-spacing: 0%;
+    text-shadow: 0px 2px 4px #00000033;  /* misma sombra que usas en Figma */
+
 }
 
 .about-content p {
@@ -212,5 +247,205 @@ background: linear-gradient(
     right: 50%;
     transform: translateX(50%);
     height: 280px;
+  }
+}
+/* =============================
+   SECCIÓN NUESTRAS ESPECIALIDADES
+   ============================= */
+
+.specialties {
+  background: #ffffff;
+  padding: 60px 0 80px;
+}
+
+.specialties-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.specialties-title {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 800;
+  letter-spacing: 0%;
+  color: #1E5542;           /* verde del branding */
+  margin-bottom: 40px;
+  line-height: 100%;
+  margin-bottom: 60px;
+  
+}
+
+/* Grid de 3x2 como en el Figma */
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px 70px;              /* fila / columna */
+}
+
+.specialty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Imagen de la especialidad */
+.specialty-card img {
+  width: 100%;
+  max-width: 566px;            /* tamaño aprox. al diseño */
+  height: auto;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 14px;
+    box-shadow: 2px 4px 4px 0px #00000033;
+}
+
+/* Título de la especialidad */
+.specialty-card h3 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #1D405F;
+  font-style: bold;
+  margin-bottom: 10px;
+  line-height: 100%;
+}
+
+/* Botón "Ver más" */
+
+
+.btn-vermas:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+/* ===== Responsive: tablet y móvil ===== */
+
+@media (max-width: 992px) {
+  .specialties-container {
+    padding: 0 30px;
+  }
+
+  .specialties-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .specialties-container {
+    padding: 0 20px;
+  }
+
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specialty-card img {
+    max-width: 100%;
+  }
+}
+/* =============================
+   SECCIÓN ¿POR QUÉ ELEGIRNOS?
+   ============================= */
+
+.why {
+  padding: 70px 0 80px;
+  background-color: #ffffff;
+}
+
+.why-title {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 800;
+  color: #1E5542;          /* mismo verde del resto */
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+/* Contenedor de las 3 tarjetas */
+.why-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Tarjeta base */
+.why-card {
+  flex: 1;
+  padding: 60px 60px 50px;
+  text-align: center;
+  color: #ffffff;
+  align-items: center;   /* centra icono y textos horizontalmente */
+  justify-content: center; /* alinea todo al centro vertical */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Colores de fondo como en Figma */
+.why-card--blue {
+  background-color: #1D405F;   /* azul oscuro */
+}
+
+.why-card--green {
+  background-color: #1E5542;   /* verde oscuro */
+}
+
+.why-card--light {
+  background-color: #C1DD9E;   /* verde claro */
+  color: #1D405F;              /* texto azulito */
+}
+.why-card--light h3 {
+  font-size: 10px;      /* antes 26px */
+    /* un pelín más compacto */
+}
+
+/* Iconos */
+.why-icon {
+  width: 80px;         /* ajusta según tu export */
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Títulos dentro de las cards */
+.why-card h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  text-shadow: 0px 2px 1px #00000033;
+}
+
+/* Párrafos */
+.why-card p {
+  font-style: medium;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-shadow: 0px 2px 1px #00000033;
+}
+.why-icon {
+  width: 80px;
+  height: auto;
+}
+
+/* agrandar corazón (2da tarjeta) y manos (3ra tarjeta) */
+.why-card:nth-child(2) .why-icon,
+.why-card:nth-child(3) .why-icon {
+  width: 100px;   /* súbelo o bájalo hasta que se vea como en Figma */
+}
+
+/* Responsive: apilar en columna en pantallas chicas */
+@media (max-width: 900px) {
+  .why-grid {
+    flex-direction: column;
+  }
+
+  .why-card {
+    padding: 40px 30px;
+  }
+
+  .why-card + .why-card {
+    border-top: 4px solid #ffffff22;
   }
 }
