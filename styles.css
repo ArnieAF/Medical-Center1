@@ -516,6 +516,7 @@ background: linear-gradient(
   line-height: 1.6;
   color: #173F72;               /* azul del sitio */
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 
@@ -535,5 +536,159 @@ background: linear-gradient(
 
   .testimonial-arrow {
     display: none;              /* en móvil ocultamos las flechas fijas */
+  }
+}
+/* =========================
+   SECCIÓN CTA: AGENDA CITA
+   ========================= */
+
+.cta-cita {
+  background: linear-gradient(
+    90deg,
+    #C1DD9E 0%,
+    #1E5542 50%,
+    #1D405F 100%
+  );
+  /* antes 60px 0; ahora más alto */
+  padding: 90px 0;
+  color: #ffffff;
+}
+
+.cta-cita-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título */
+.cta-cita-content h2 {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-bottom: 16px;
+  text-shadow: 0px 2px 1px #00000033;
+}
+
+.cta-cita-content h2 span {
+  color: #C1DD9E; /* "HOY MISMO" en verde clarito */
+  font-weight: 800;
+}
+
+/* Texto */
+.cta-cita-content p {
+  font-size: 30px;
+  margin-bottom: 28px;
+  text-shadow: 0px 2px 1px #00000033;
+  line-height: 30px;
+}
+
+/* Botón */
+.cta-cita-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: #C1DD9E;
+  color: #ffff;
+  font-weight: 700;
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px 0px #00000033;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-shadow: 0px 2px 1px #00000033;
+}
+
+.cta-cita-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 4px 8px 0px #00000033;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-cita {
+    /* también un poco más grande en móvil */
+    padding: 60px 20px;
+  }
+
+  .cta-cita-content h2 {
+    font-size: 24px;
+  }
+
+  .cta-cita-content p {
+    font-size: 16px;
+  }
+}
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  background-color: #1D405F;
+  color: #ffffff;
+  padding: 60px 0 30px;
+  margin-top: 105px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 300px;
+}
+
+.footer-col h3 {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-shadow: 0px 2px 1px #00000033;
+}
+
+.footer-subtitle {
+  margin-top: 32px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.footer-col p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer-hours p {
+  margin-bottom: 8px;
+}
+
+.footer-hours span {
+  color: #C1DD9E;
+  font-weight: 700;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 32px;
   }
 }
