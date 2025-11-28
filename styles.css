@@ -170,6 +170,84 @@ position: absolute;
     box-shadow: 0px 4px 4px 0px #00000033;
 
 }
+/* ============================
+   HERO "CIENCIA QUE CUIDA..."
+   RESPONSIVE SOLO TIPOGRAFÍA
+   ============================ */
+
+/* Tablet grande / laptop chica */
+@media (max-width: 1024px) {
+  .doctor-text {
+    width: 70%;
+  }
+
+  .color-blanco,
+  .color-azul {
+    font-size: 48px;      /* antes 60px */
+  }
+
+  .doctor-text p {
+    margin-top: 36px;
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  .btn-especialidades {
+    margin-top: 40px;
+    font-size: 1.05rem;
+    padding: 12px 28px;
+  }
+}
+
+/* Tablet vertical / pantallas medias */
+@media (max-width: 768px) {
+  .doctor-text {
+    width: 80%;           /* un poco más ancho para que quepa el título */
+  }
+
+  .color-blanco,
+  .color-azul {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .doctor-text p {
+    margin-top: 28px;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .btn-especialidades {
+    margin-top: 32px;
+    font-size: 0.95rem;
+    padding: 10px 24px;
+  }
+}
+
+/* Celulares chicos (~375–425px hacia abajo) */
+@media (max-width: 480px) {
+  .doctor-text {
+    width: 90%;
+  }
+
+  .color-blanco,
+  .color-azul {
+    font-size: 30px;
+  }
+
+  .doctor-text p {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  .btn-especialidades {
+    margin-top: 28px;
+    font-size: 0.9rem;
+    padding: 10px 22px;
+  }
+}
+
 
 .btn-vermas{
   display: inline-block;
@@ -351,7 +429,40 @@ position: absolute;
     max-width: 300px;
   }
 }
+@media (max-width: 768px) {
+  /* Sección ¿QUIÉNES SOMOS? sin doctores en móvil */
+  .about {
+    min-height: auto;
+    padding: 40px 20px 40px;
+  }
 
+  .about-content {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 480px;
+    text-align: center;   /* centra el título y el párrafo */
+  }
+
+  .about-content p {
+    width: 100%;          /* ocupa todo el ancho, nada de 40% */
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .about-img {
+    display: none;        /* 🔥 aquí se esconden los doctores */
+  }
+}
+/* Más compacto en pantallas grandes (1440px en adelante) */
+@media (min-width: 1441px) {
+  .about-content {
+    max-width: 1400px;   /* ancho ideal para 1920px y más */
+    margin: 0 auto;      /* centra el bloque COMPLETO */
+  }
+  .about-img {
+    margin-right: 100px;        /* 🔥 aquí se esconden los doctores */
+  }
+}
 
 /* =============================
    SECCIÓN NUESTRAS ESPECIALIDADES
@@ -433,6 +544,18 @@ position: absolute;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 40px 40px;
   }
+  .specialty-card h3 {
+    font-size: 28px;      /* antes 35px */
+    line-height: 110%;
+  }
+
+  .btn-vermas {
+    font-size: 1rem;      /* un poco más chico */
+    padding: 10px 22px;   /* menos ancho y alto */
+  }
+   .specialties-title {
+    font-size: 38px;     /* antes 45px */
+  }
 }
 
 @media (max-width: 600px) {
@@ -446,6 +569,19 @@ position: absolute;
 
   .specialty-card img {
     max-width: 100%;
+  }
+  .specialty-card h3 {
+    font-size: 24px;
+    line-height: 115%;
+  }
+
+  .btn-vermas {
+    font-size: 0.95rem;
+    padding: 9px 20px;
+  }
+  .specialties-title {
+    font-size: 30px;     /* más compacto en móvil */
+    line-height: 110%;
   }
 }
 /* =============================
@@ -540,19 +676,79 @@ position: absolute;
 }
 
 /* Responsive: apilar en columna en pantallas chicas */
-@media (max-width: 900px) {
+/* Desktop intermedio (1200px → 901px): 3 cajas juntas, pero con espacio a los lados */
+@media (max-width: 1200px) and (min-width: 901px) {
+
   .why-grid {
-    flex-direction: column;
+    gap: 0;               /* SIN separación ENTRE las cajas */
+    padding: 0 20px;      /* Bordes blancos a la izquierda y derecha */
+  }
+
+  /* Ajuste: evitar que las tarjetas se separen */
+  .why-card {
+    margin: 0;            /* Borra cualquier margin raro */
+  }
+}
+
+
+
+/* Márgenes laterales en móvil para ¿POR QUÉ ELEGIRNOS? */
+@media (max-width: 600px) {
+  .why {
+    padding: 40px 32px 60px;  /* top – left/right – bottom */
+    margin-top: -50px;
+  }
+}
+/* ===== MODO FIGMA — ABAJO DE 901px ===== */
+@media (max-width: 901px) {
+
+  .why {
+    padding: 40px 0 50px;
+  }
+
+  /* Las 3 cajas siguen en fila, solo más compactas */
+  .why-grid {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;   /* IMPORTANTE: seguimos en fila */
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 16px;       /* bordes blancos a los lados */
+    gap: 0;                /* sin separación entre cajas */
   }
 
   .why-card {
-    padding: 40px 30px;
+    flex: 1;
+    padding: 32px 12px;    /* menos padding para que quepan bien */
+    text-align: center;
   }
 
-  .why-card + .why-card {
-    border-top: 4px solid #ffffff22;
+  /* En mobile no mostramos el párrafo, solo ícono + título */
+  .why-card p {
+    display: none;
+  }
+
+  .why-icon {
+    width: 56px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  .why-card h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  /* Título principal un poco más chico en mobile */
+  .why-title {
+    font-size: 28px;
+    margin-bottom: 20px;
   }
 }
+
+
 /* ==========================
    SECCIÓN TESTIMONIOS
    ========================== */
@@ -566,41 +762,26 @@ position: absolute;
   font-size: 48px;
   font-weight: 800;
   letter-spacing: 0;
-  color: #1E5542;       /* mismo verde del resto */
+  color: #1E5542;
   margin-bottom: 50px;
+      margin-top: -100px;
+
 }
 
-/* Contenedor general: flecha - card - card - card - flecha */
+/* ====== MODO ESCRITORIO (≥ 993px) ====== */
+/* Aquí se ven los 3 testimonios uno debajo del otro,
+   como ya los tienes ahora. Las flechas se ocultan. */
+
 .testimonials-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto 1fr 1fr 1fr auto;
-  align-items: center;
-  column-gap: 60px;
+  display: block;        /* cada card ocupa toda la línea */
 }
 
-/* Flechas */
-.testimonial-arrow {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.testimonial-arrow img {
-  width: 52px;
-  height: auto;
-}
-
-/* Cards */
 .testimonial-card {
   text-align: center;
   max-width: 320px;
-  margin: 0 auto;
+  margin: 0 auto 60px;   /* separacion entre testimonios */
 }
 
 /* Foto circular */
@@ -611,37 +792,135 @@ position: absolute;
   object-fit: cover;
   display: block;
   margin: 0 auto 24px;
-
 }
 
 /* Texto del testimonio */
 .testimonial-text {
   font-size: 18px;
   line-height: 1.6;
-  color: #173F72;               /* azul del sitio */
+  color: #173F72;
   margin-bottom: 20px;
   font-weight: 500;
 }
-
 
 /* Nombre y edad */
 .testimonial-name {
   font-size: 20px;
   font-weight: 700;
-  color: #C1DD9E;               /* verde clarito tipo Figma */
+  color: #C1DD9E;
 }
 
-/* Responsive: apilar en columnas cuando la pantalla es estrecha */
+/* Flechas ocultas en desktop */
+.testimonial-arrow {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.testimonial-arrow img {
+  width: 52px;
+  height: auto;
+}
+
+/* ====== SLIDER MÓVIL / TABLET (≤ 992px) ====== */
+
 @media (max-width: 992px) {
   .testimonials-wrapper {
-    grid-template-columns: 1fr;
-    row-gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* flecha - card - flecha */
+    align-items: center;
+    column-gap: 40px;
   }
 
+  /* En modo slider: solo se muestra la .active */
+  .testimonial-card {
+    display: none;
+    margin-bottom: 0; /* para que no deje huecos */
+  }
+
+  .testimonial-card.active {
+    display: block;
+  }
+
+  /* Flechas visibles a los lados */
   .testimonial-arrow {
-    display: none;              /* en móvil ocultamos las flechas fijas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   .testimonials-title {
+    font-size: 38px;   /* antes 48px */
+    margin-bottom: 40px;
+        margin-top: -100px;
   }
 }
+/* ====== DESKTOP (≥ 993px) — tres testimonios en línea ====== */
+@media (min-width: 993px) {
+  .testimonials-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas */
+    justify-items: center;
+    align-items: start;
+    column-gap: 40px;
+  }
+
+  /* Mostrar todas las cards */
+  .testimonial-card {
+    display: block !important;
+    max-width: 320px;
+  }
+
+  /* Ocultar flechas en escritorio */
+  .testimonial-arrow {
+    display: none !important;
+  }
+}
+
+/* ====== SLIDER MÓVIL/TABLET (≤ 992px) ====== */
+@media (max-width: 992px) {
+  .testimonials-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* flecha - card - flecha */
+    align-items: center;
+    column-gap: 40px;
+  }
+
+  /* En mobile mostramos solo el testimonio activo */
+  .testimonial-card {
+    display: none;
+  }
+
+  .testimonial-card.active {
+    display: block;
+  }
+
+  /* Flechas visibles */
+  .testimonial-arrow {
+    width: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .testimonials-title {
+    font-size: 28px;   /* mucho más cómodo en mobile */
+    margin-bottom: 30px;
+    margin-top: -100px;
+  }
+}
+
+
 /* =========================
    SECCIÓN CTA: AGENDA CITA
    ========================= */
@@ -705,7 +984,23 @@ position: absolute;
   transform: translateY(-1px);
   box-shadow: 0px 4px 8px 0px #00000033;
 }
+/* Tablet / laptop chica: CTA más compacto */
+@media (max-width: 992px) {
+  .cta-cita-content h2 {
+    font-size: 40px;     /* antes 50px */
+  }
 
+  .cta-cita-content p {
+    font-size: 24px;     /* antes 30px */
+    line-height: 28px;
+  }
+
+  .cta-cita-btn {
+    font-size: 20px;     /* antes 25px */
+    padding: 10px 26px;  /* un poco menos gordito */
+    border-radius: 18px;
+  }
+}
 /* Responsive */
 @media (max-width: 768px) {
   .cta-cita {
@@ -720,6 +1015,12 @@ position: absolute;
   .cta-cita-content p {
     font-size: 16px;
   }
+  .cta-cita-btn {
+    font-size: 18px;      /* más chico que en tablet */
+    padding: 8px 22px;    /* botón más compacto */
+    border-radius: 16px;
+  }
+ 
 }
 /* =========================
    FOOTER
@@ -789,13 +1090,35 @@ position: absolute;
 }
 
 /* Responsive footer */
+/* ===== Footer: pantallas medianas (tablet / laptop chica) ===== */
+@media (max-width: 1024px) {
+  .footer-inner {
+    max-width: 900px;      /* un poco más angosto para que se centre mejor */
+    gap: 120px;            /* antes 300px */
+    padding: 0 40px;       /* da aire a los lados */
+  }
+}
+
+/* ===== Footer: móvil / tablet vertical ===== */
 @media (max-width: 768px) {
   .footer-inner {
     flex-direction: column;
+    align-items: center;   /* centra las columnas */
+    gap: 24px;
     padding: 0 24px;
-    gap: 32px;
+    text-align: center;    /* títulos y párrafos centrados */
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 420px;      /* columna más compacta y centrada */
+  }
+
+  .footer-item {
+    justify-content: center;  /* iconito + texto centrados */
   }
 }
+
 
 /* Ajustes responsive para la sección ¿QUIÉNES SOMOS?
    Evitar que la imagen de doctores choque con el texto en 1024–1366px */

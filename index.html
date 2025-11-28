@@ -25,10 +25,15 @@
       <a href="#">Tienda</a>
     </nav>
 
-    <a href="#" class="btn-cita">
-      <img src="img/wsp_logo.png" alt="WhatsApp">
-      AGENDA UNA CITA
-    </a>
+   <a 
+  href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
+  class="btn-cita"
+  target="_blank"
+  rel="noopener"
+>
+  <img src="img/wsp_logo.png" alt="">
+  Agenda una cita
+</a>
 
     <!-- Botón hamburguesa (solo se verá en mobile) -->
     <button class="nav-toggle" aria-label="Abrir menú">
@@ -177,7 +182,7 @@
       <p class="testimonial-name">— Jorge, 62 años</p>
     </article>
 
-    <!-- Card 2 (central) -->
+    <!-- Card 2 -->
     <article class="testimonial-card">
       <img
         src="img/helena.png"
@@ -277,6 +282,36 @@
       nav.classList.toggle('nav--open');
     });
   });
+</script>
+<script>
+  (function () {
+    const cards = document.querySelectorAll('.testimonial-card');
+    const btnPrev = document.querySelector('.arrow-left');
+    const btnNext = document.querySelector('.arrow-right');
+
+    if (!cards.length || !btnPrev || !btnNext) return;
+
+    let currentIndex = 0;
+
+    function showCard(index) {
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === index);
+      });
+    }
+
+    // Estado inicial: mostramos el primero
+    showCard(currentIndex);
+
+    btnNext.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showCard(currentIndex);
+    });
+
+    btnPrev.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showCard(currentIndex);
+    });
+  })();
 </script>
 
 </body>
