@@ -172,44 +172,108 @@ header {
 .valores h2 {
   color: white;
   font-size: 45px;
-  font-weight: extra-bold;
+  font-weight: 800;
   margin-bottom: 50px;
-  
 }
 
 .valores-items {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 130px;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
+
+.valor {
+  flex: 0 0 auto;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .valor img {
-  height: 120px;     /* todas las imágenes medirán lo mismo */
+  height: 120px;
   width: auto;
   object-fit: contain;
   display: block;
-  margin: 0 auto;
-}
-
-
-.valor {
-  
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .valor p {
-  margin-top: 16px;
   text-align: center;
+  line-height: 1.2;
+  margin: 0;
+  width: 100%;
 }
 
-.valor.cercania {
-  transform: translateX(-31px);
+/* MISIÓN Y VISIÓN */
+.mision-vision {
+  width: 90%;
+  max-width: 1200px;
+  margin: 70px auto;
+  display: flex;
+  gap: 0; 
+  align-items: stretch;
 }
 
-.valor .atencion {
-  transform: translateX(-31px);
+/* Estilos compartidos para ambos bloques */
+.mision, .vision {
+  /* width: 600px; <-- Es mejor quitar el ancho fijo para evitar problemas, flex:1 se encarga */
+  flex: 1;
+  height: 521px; /* Mantengo tu altura */
+  text-align: center;
+  /* Aumenté el padding lateral a 80px para que el texto se agrupe más al centro */
+  padding: 60px 80px; 
+  color: white; 
 }
 
+/* Estilo específico para MISIÓN (Izquierda - Verde Oscuro) */
+.mision {
+  background-color: #1E5542; 
+  
+}
 
+/* Estilo específico para VISIÓN (Derecha - Azul Oscuro) */
+.vision {
+  background-color: #1D405F; 
+  
+}
+
+/* Títulos */
+.mision h3, .vision h3 {
+  font-size: 25px; 
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px; /* Reducido de 25px a 15px para pegarlo al texto */
+  margin-top: 25px;
+}
+
+/* Párrafos */
+.mision .primerap, .vision .primerap {
+  font-size: 20px;
+  line-height: 1.35; /* Reducido de 1.6 a 1.35 para juntar las líneas */
+  color: white; 
+  margin-bottom: 20px; /* Un poco de espacio antes del segundo párrafo */
+}
+
+.mision .segundap, .vision .segundap {
+  font-size: 20px;
+  line-height: 1.35; /* Reducido de 1.6 a 1.35 */
+  color: white; 
+  margin-top: 0px;
+}
+
+/* Íconos */
+.icon-box img {
+  height: 130px; 
+  width: 130px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto; 
+}
