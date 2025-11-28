@@ -4,6 +4,16 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;  /* bloquea ese scroll horizontal feo */
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 header {
   width: 100%;
@@ -36,6 +46,19 @@ header {
 
 
 /* NAV MENU */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-toggle img {
+  width: 32px;
+  height: auto;
+}
+
 .nav {
   display: flex;
   gap: 25px;
@@ -170,14 +193,13 @@ position: absolute;
    ============================= */
 
 .about {
-  position: relative;  /* para posicionar la imagen dentro *//* GRADIENTE MÁS CERCANO AL FIGMA */
-background: linear-gradient(
-  165.49deg,
-  #489C9C 21.21%,
-  #173F72 78.79%
-);
-
-  min-height: 485px;   /* altura similar al frame del Figma */
+  position: relative;
+  background: linear-gradient(
+    165.49deg,
+    #489C9C 21.21%,
+    #173F72 78.79%
+  );
+  min-height: 485px;
   color: #ffffff;
   overflow: hidden;
 }
@@ -186,69 +208,151 @@ background: linear-gradient(
 .about-content {
   max-width: 1440px;
   margin: 10px 25px;
-  padding: 60px 60px 40px;  /* arriba, lados, un poco abajo */
-    text-shadow: 0px 2px 4px #00000033;  /* misma sombra que usas en Figma */
-
+  padding: 60px 60px 40px;
+  text-shadow: 0px 2px 4px #00000033;
 }
 
 .about-content h2 {
   font-size: 50px;
   font-weight: 800;
-  font-style: bolder;
-  letter-spacing: 0;
   margin-bottom: 24px;
-  letter-spacing: 0%;
-    text-shadow: 0px 2px 4px #00000033;  /* misma sombra que usas en Figma */
-
+  letter-spacing: 0;
+  text-shadow: 0px 2px 4px #00000033;
 }
 
 .about-content p {
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 18px;
-  width: 40%;
+  width: 40%;           /* texto a la izquierda */
 }
 
 .about-content .especialidad {
-  color: #C1DD9E;   /* verde de las especialidades */
+  color: #C1DD9E;
   font-weight: 700;
 }
 
-/* Imagen de doctores: pegada abajo a la derecha */
+/* Doctores a la derecha en escritorio */
 .about-img {
   position: absolute;
-  right: 1px;       /* mismo margen que el texto a la izquierda */
-  bottom: 0;         /* pegado al final del gradiente */
-  height: 500px;     /* AJUSTA este valor si la quieres un poco más grande/pequeña */
+  right: 0;
+  bottom: 0;
+  height: 500px;
   width: auto;
   display: inline-block;
   margin-bottom: -8px;
+  
 }
 
-/* =============================
-   Responsive
-   ============================= */
+/* ============ BREAKPOINTS ESCRITORIO / TABLET ANCHA ============ */
 
-@media (max-width: 900px) {
-  .about {
-    min-height: auto;
-    padding-bottom: 260px; /* espacio para que quepa la imagen */
+@media (max-width: 1350px) {
+  .about-img {
+    height: 460px;
   }
+}
 
+@media (max-width: 1200px) {
   .about-content {
-    padding: 40px 24px;
+    padding: 50px 50px 40px;
   }
 
   .about-content h2 {
-    font-size: 2rem;
+    font-size: 44px;
+  }
+
+  .about-content p {
+    width: 40%;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .about-img {
-    right: 50%;
-    transform: translateX(50%);
-    height: 280px;
+    height: auto;
+    margin-bottom: 50px;
   }
 }
+
+/* Tablet horizontal (~1024px) */
+@media (max-width: 1024px) {
+  .about-content {
+    padding: 40px 40px 35px;
+    max-height: 500px;
+  }
+
+  .about-content h2 {
+    font-size: 44px;
+  }
+
+  .about-content p {
+    width: 40%;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .about-img {
+    height: auto;
+    margin-left: 10rem;
+  }
+}
+
+
+/* ============ MÓVIL Y TABLET VERTICAL (layout en columna) ============ */
+
+@media (max-width: 768px) {
+  .about {
+    min-height: auto;
+    overflow: visible;               /* ya no recortes nada */
+    padding: 40px 20px 40px;
+  }
+
+  .about-content {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 480px;
+    text-align: center;              /* como en el Figma mobile */
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .about-content p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+
+  /* Aquí rompemos el absolute: la imagen pasa a flujo normal */
+  .about-img {
+    position: static;
+    display: block;
+    margin: 24px auto 0;
+    height: auto;                    /* NADA de altura fija */
+    width: 70%;                      /* docs centrados, proporción parecida al Figma */
+    max-width: 320px;
+  }
+}
+
+/* Extra pequeño (~375px) por si quieres ajustar un poco más */
+@media (max-width: 480px) {
+  .about {
+    padding: 32px 16px 32px;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .about-img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+
 /* =============================
    SECCIÓN NUESTRAS ESPECIALIDADES
    ============================= */
@@ -692,3 +796,153 @@ background: linear-gradient(
     gap: 32px;
   }
 }
+
+/* Ajustes responsive para la sección ¿QUIÉNES SOMOS?
+   Evitar que la imagen de doctores choque con el texto en 1024–1366px */
+
+/* De 1350px hacia abajo: imagen un poco más pequeña */
+/* =============================
+   RESPONSIVE ¿QUIÉNES SOMOS?
+   ============================= */
+
+/* 1) De 1350px hacia abajo: achico un poco la imagen */
+
+/* ESTADO POR DEFECTO (ESCRITORIO) */
+.logo-desktop {
+  display: block;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+/* Botón hamburguesa escondido en escritorio */
+.nav-toggle {
+  display: none;
+}
+/* HEADER ENTRE 1200px Y 1075px
+   - Damos más margen a los lados para que
+     logo e "Agenda una cita" se acerquen al centro */
+@media (max-width: 1258px) and (min-width: 1075px) {
+  header {
+    padding: 30px 0; /* un pelín menos alto para que no se vea tan pesado */
+  }
+
+  .container {
+    width: 95%;      /* antes 90%, así entra más hacia el centro */
+    max-width: 1100px;
+  }
+}
+/* Ajuste fino: logo más centrado entre 1200px y 1075px */
+@media (max-width: 1258px) and (min-width: 1075px) {
+
+  .logo-mobile {
+    margin-left: 10px; /* antes 0 — agrega aire a la izquierda */
+  }
+
+  /* Si usas .logo-desktop en este rango */
+  .logo-desktop {
+    margin-left: 10px; 
+  }
+}
+
+
+/* HEADER MOBILE / TABLET DESDE 1074px PARA ABAJO */
+@media (max-width: 1074px) {
+  header {
+    padding: 20px 0;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* logo a la izquierda, menú a la derecha */
+    position: relative;              /* referencia para colocar el botón centrado */
+  }
+
+  /* LOGOS: cambiamos de full a ícono */
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    width: 62px;     /* como en Figma (62.41 x 53.99) */
+    height: auto;
+  }
+
+  /* Botón hamburguesa visible */
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* BOTÓN CITA CENTRADO EN EL HEADER */
+  .btn-cita {
+    position: absolute;
+    left: 50%;
+    top: 50%;                     /* centro vertical del header */
+    transform: translate(-50%, -50%);  /* lo centra exacto */
+    margin-left: 38px;
+    height: auto;
+    padding: 10px 24px;
+    width: auto;
+    font-size: 14px;
+    gap: 8px;
+    border-radius: 20px;
+    white-space: nowrap;          /* para que no se rompa el texto */
+  }
+
+  .btn-cita img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* NAV desplegable */
+  .nav {
+    position: absolute;
+    top: 100%;          /* justo debajo del header */
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    display: none;      /* oculto inicialmente */
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0 24px;
+    border-top: 1px solid #e5e5e5;
+    z-index: 1000;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  /* Clase que se activa al hacer click en el menú */
+  .nav.nav--open {
+    display: flex;
+  }
+}
+/* Reducir espacio blanco a la izquierda del logo en móvil */
+@media (max-width: 1074px) {
+  header {
+    padding-left: 10px;   /* antes era más grande */
+    padding-right: 10px;
+  }
+
+  .header-content {
+    padding-left: 0;      /* elimina aire extra del flex container */
+  }
+
+  .logo-mobile {
+    margin-left: -23px;       /* pega más el logo al borde */
+  }
+}
+/* 3) Tablet horizontal (~1024px): hago el texto más chico y más ancho */

@@ -8,22 +8,35 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
+    <header>
   <div class="container header-content">
     <div class="logo">
-      <img src="img/logo.png" alt="Medical Center Logo">
+      <!-- Logo completo (desktop) -->
+      <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
+      <!-- Logo solo ícono (mobile) -->
+      <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
     </div>
 
     <nav class="nav">
-      <a href="#" class="active">INICIO</a>
-      <a href="#" >NOSOTROS</a>
-      <a href="#">ESPECIALIDADES</a>
-      <a href="#">DOCTORES</a>
-      <a href="#">TIENDA</a>
+      <a href="#">Inicio</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Especialidades</a>
+      <a href="#">Doctores</a>
+      <a href="#">Tienda</a>
     </nav>
-    <a class="btn-cita" href="#"> <img src="img/wsp_logo.png" alt="WhatsApp"> AGENDA UNA CITA </a>
+
+    <a href="#" class="btn-cita">
+      <img src="img/wsp_logo.png" alt="WhatsApp">
+      AGENDA UNA CITA
+    </a>
+
+    <!-- Botón hamburguesa (solo se verá en mobile) -->
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <img src="img/menu.svg" alt="Menú">
+    </button>
   </div>
 </header>
+
 <section class="doctor-inicio">
   <img class = "doctor-img" src = "img/toma_nota.jpg" alt="Doctor toma nota">
   <div class = "doctor-text">
@@ -253,7 +266,18 @@
     Todos los derechos reservados &copy; 2025
   </div>
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
 
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('nav--open');
+    });
+  });
+</script>
 
 </body>
 </html>
