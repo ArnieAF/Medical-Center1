@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;  /* bloquea ese scroll horizontal feo */
+}
 
 header {
   width: 100%;
@@ -47,11 +52,11 @@ header {
   text-decoration: none;
   color: #173F72;
   font-size: 15px;
-  font-weight: medium;
+  font-weight: 700;
 }
 
 .nav a.active {
-  color: #6fbf73;
+  color: #1E5542;
 }
 
 /* BOTÓN AGENDA */
@@ -105,14 +110,16 @@ header {
 
 .hero-text h1 {
   font-size: 60px;
-  font-weight: extra-bold;
+  font-weight: 800;
+  font-style: extra-bold;
   color: #C1DD9E;
+  text-shadow: 0px 4px 4px #00000033;
 }
 
 .hero-text p {
   margin-top: 30px;
   font-size: 25px;
-  font-weight: mediums;
+  font-weight: 500;
 }
 
 
@@ -126,9 +133,11 @@ header {
 .proposito h2 {
   text-align: center;
   font-size: 45px;
-  font-weight: extra-bold;
+  font-weight: 800;
   color: #1E5542; /* luego tú ajustas el color */
   margin-bottom: 50px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .proposito-content {
@@ -141,13 +150,13 @@ header {
 .proposito-text {
   width: 50%;
   font-size: 25px;
-  font-weight: mixted;
+  font-weight: 500;
   line-height: 1.6;
   color: #173F72;
 }
 
 .proposito-text strong {
-  font-weight: medium;
+  font-weight: 700;
   color: #1E5542;
 }
 
@@ -159,6 +168,90 @@ header {
   width: 100%;
   border-radius: 10px; /* si lo quieres recto, lo quitas */
 }
+/* ===== AJUSTES DESDE 900px HACIA ABAJO ===== */
+/* 900px para abajo: vista tipo Figma, más compacta */
+@media (max-width: 900px) {
+  .proposito {
+    width: 88%;
+    margin: 50px auto;
+  }
+
+  .proposito h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .proposito-content {
+    gap: 24px;                /* menos separación entre texto e imagen */
+  }
+
+  .proposito-text {
+    width: 55%;               /* texto un poco más angosto */
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  /* Solo dejamos el primer párrafo: hasta “etapa de su cuidado.” */
+  .proposito-text p:last-of-type {
+    display: none;
+  }
+
+  .proposito-img {
+    width: 45%;               /* imagen gana un poco más de espacio */
+  }
+
+  .proposito-img img {
+    width: 100%;
+  }
+}
+
+/* Extra ajuste para móviles bien chicos (≈375px) */
+@media (max-width: 600px) {
+  .proposito {
+    width: 94%;
+  }
+
+  .proposito-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 490px) {
+
+  .proposito {
+    width: 94%;
+    margin: 50px auto;
+  }
+
+  .proposito h2 {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+        text-align: center;
+
+  }
+
+  .proposito-content {
+    gap: 16px;                 /* menos espacio entre texto e imagen */
+  }
+
+  /* Texto más compacto y con un poco más de ancho */
+  .proposito-text {
+    width: 58%;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  /* Imagen un poco más angosta para que no “ahogue” al texto */
+  .proposito-img {
+    width: 42%;
+  }
+
+  .proposito-img img {
+    width: 100%;
+  }
+}
+
+
 
 
 /* VALORES */
@@ -174,6 +267,8 @@ header {
   font-size: 45px;
   font-weight: 800;
   margin-bottom: 50px;
+  text-shadow: 0px 1px 2px #00000040;
+
 }
 
 .valores-items {
@@ -203,6 +298,8 @@ header {
   object-fit: contain;
   display: block;
   margin-bottom: 15px;
+ filter: drop-shadow(0px 2px 2px #00000040);
+
 }
 
 .valor p {
@@ -245,6 +342,8 @@ header {
   
 }
 
+
+
 /* Títulos */
 .mision h3, .vision h3 {
   font-size: 25px; 
@@ -252,6 +351,8 @@ header {
   color: white;
   margin-bottom: 15px; /* Reducido de 25px a 15px para pegarlo al texto */
   margin-top: 25px;
+  text-shadow: 0px 2px 1px #00000033;
+
 }
 
 /* Párrafos */
@@ -260,6 +361,9 @@ header {
   line-height: 1.35; /* Reducido de 1.6 a 1.35 para juntar las líneas */
   color: white; 
   margin-bottom: 20px; /* Un poco de espacio antes del segundo párrafo */
+ text-shadow: 0px 1px 2px #00000040;
+
+
 }
 
 .mision .segundap, .vision .segundap {
@@ -306,7 +410,8 @@ header {
   font-weight: 600;
   letter-spacing: 0;
   margin-bottom: 16px;
-  text-shadow: 0px 2px 1px #00000033;
+  text-shadow: 0px 2px 2px #00000033;
+
 }
 
 .cta-cita-content h2 span {
@@ -318,7 +423,7 @@ header {
 .cta-cita-content p {
   font-size: 30px;
   margin-bottom: 28px;
-  text-shadow: 0px 2px 1px #00000033;
+  text-shadow: 0px 1px 4px #00000033;
   line-height: 30px;
 }
 
