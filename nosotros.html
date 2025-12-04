@@ -7,22 +7,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="nosotros.css">
 </head>
+<div id="overlay"></div>
 <body>
-  <header class="header">
+   <header>
   <div class="container header-content">
     <div class="logo">
-      <img src="img/logo.png" alt="Medical Center Logo">
+      <!-- Logo completo (desktop) -->
+      <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
+      <!-- Logo solo ícono (mobile) -->
+      <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
     </div>
 
     <nav class="nav">
-      <a href="#">INICIO</a>
-      <a href="#" class="active">NOSOTROS</a>
-      <a href="#">ESPECIALIDADES</a>
-      <a href="#">DOCTORES</a>
-      <a href="#">TIENDA</a>
+      <a href="#" class="active">Inicio</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Especialidades</a>
+      <a href="#">Doctores</a>
+      <a href="#">Tienda</a>
     </nav>
 
-    <a class="btn-cita" href="#"> <img src="img/wsp_logo.png" alt="WhatsApp"> AGENDA UNA CITA </a>
+   <a 
+  href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
+  class="btn-cita"
+  target="_blank"
+  rel="noopener"
+>
+  <img src="img/wsp_logo.png" alt="">
+  Agenda una cita
+</a>
+
+    <!-- Botón hamburguesa (solo se verá en mobile) -->
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <img src="img/menu.svg" alt="Menú">
+    </button>
   </div>
 </header>
 
@@ -93,8 +110,8 @@
       <img src="img/mision-icon.png" alt="Ícono Misión">
     </div>
     <h3>Misión</h3>
-    <p class="primerap">Cuidar de cada persona con ciencia, empatía y dedicación.<br>Acompañamos a nuestros pacientes en cada etapa de su salud, ofreciendo diagnósticos confiables, tratamientos 
-      efectivos y un trato humano que los haga sentir escuchados y comprendidos.</p>
+    <p class="primerap">Cuidar de cada persona con ciencia, empatía y dedicación.<br><span class="segundap">Acompañamos a nuestros pacientes en cada etapa de su salud, ofreciendo diagnósticos confiables, tratamientos 
+      efectivos y un trato humano que los haga sentir escuchados y comprendidos.</span></p>
   </div>
 
   <div class="vision">
@@ -102,9 +119,7 @@
       <img src="img/vision-icon.png" alt="Ícono Visión">
     </div>
     <h3>Visión</h3>
-    <p class="primerap">Soñamos con ser un consultorio médico donde cada paciente encuentre confianza, cercanía y esperanza.<br>
-      Queremos ser reconocidos como un espacio que une la medicina con la calidez humana.
-    </p>
+    <p class="primerap">Soñamos con ser un consultorio médico donde cada paciente encuentre confianza, cercanía y esperanza.<br><span class="segundap">Queremos ser reconocidos como un espacio que une la medicina con la calidez humana.</span></p>
   </div>
 </section>
 
@@ -164,6 +179,26 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  const overlay = document.getElementById('overlay');
+
+  if (!toggle || !nav || !overlay) return;
+
+  toggle.addEventListener('click', function () {
+    nav.classList.toggle('nav--open');
+    overlay.classList.toggle('overlay--active');
+  });
+
+  // CERRAR menú al hacer click en el overlay
+  overlay.addEventListener('click', function () {
+    nav.classList.remove('nav--open');
+    overlay.classList.remove('overlay--active');
+  });
+});
+</script>
 
 
 </body>
