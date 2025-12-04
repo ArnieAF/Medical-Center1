@@ -37,6 +37,11 @@ header {
   justify-content: space-between;
   width: 100%;
 }
+.logo-mobile {
+  display: none;
+  width: 70px;
+  height: auto;
+}
 
 .logo img{
   width: 233px;
@@ -75,6 +80,74 @@ header {
 .nav a.active {
   color: #1E5542;
 }
+/* HEADER PERFECTO EN 440px → ABAJO */
+@media (max-width: 440px) {
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  /* Logo fijado a la izquierda */
+  .logo-mobile {
+    width: 58px;
+    flex-shrink: 0;  
+    margin-left: 20px !important;  /* no se estira ni aplasta */
+  }
+
+  /* El botón usa flex-grow para ocupar el espacio del centro */
+  .btn-cita {
+    position: static !important;
+    transform: none !important;
+
+    flex-grow: 1;                /* EXPANDE el espacio central */
+    text-align: center;
+    margin: 0 10px;              /* aire a los lados */
+
+    padding: 8px 18px;
+    font-size: 12px;
+    border-radius: 18px;
+    gap: 6px;
+    width: auto;
+    height: auto;
+  }
+
+  .btn-cita img {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Hamburguesa fijada a la derecha */
+  .nav-toggle {
+    flex-shrink: 0;             /* no se achica */
+  }
+
+  .nav-toggle img {
+    width: 28px;
+  }
+}
+/* Ajuste fino SOLO entre 425px y 400px */
+@media (max-width: 425px) and (min-width: 400px) {
+  .btn-cita {
+    margin-right: 30px !important;
+  }
+}
+/* LOGO MÁS GRANDE EN 320px */
+
+@media (max-width: 768px) {
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+  }
+}
+
+
+
+
 
 /* BOTÓN AGENDA */
 .btn-cita {
@@ -98,6 +171,15 @@ header {
   width: 20px; /* ajustable si lo deseas */
   height: 20px;
 }
+/* ============================
+   MENÚ MOBILE — DISEÑO MEJORADO
+   ============================ */
+
+/* Ocultar menú en mobile por defecto */
+/* ======================================
+   OVERLAY — oscurecer página al abrir menú
+   ====================================== */
+
 
 .doctor-inicio{
   position: relative;
@@ -571,7 +653,7 @@ position: absolute;
     max-width: 100%;
   }
   .specialty-card h3 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 115%;
   }
 
@@ -580,10 +662,20 @@ position: absolute;
     padding: 9px 20px;
   }
   .specialties-title {
-    font-size: 30px;     /* más compacto en móvil */
+    font-size: 22px;     /* más compacto en móvil */
     line-height: 110%;
+    margin-bottom: 30px;
+    margin-top: -20px;
   }
 }
+@media (max-width: 450px) and (min-width: 375px) {
+  .btn-vermas {
+    font-size: 0.75rem !important;
+    padding: 7px 16px !important;   /* opcional: acompaña el tamaño */
+    border-radius: 14px !important;
+  }
+}
+
 /* =============================
    SECCIÓN ¿POR QUÉ ELEGIRNOS?
    ============================= */
@@ -674,6 +766,12 @@ position: absolute;
 .why-card:nth-child(3) .why-icon {
   width: 100px;   /* súbelo o bájalo hasta que se vea como en Figma */
 }
+@media (max-width: 900px) and (min-width: 600px) {
+  .why-title,
+  .testimonials-title {
+    font-size: 34px !important;
+  }
+}
 
 /* Responsive: apilar en columna en pantallas chicas */
 /* Desktop intermedio (1200px → 901px): 3 cajas juntas, pero con espacio a los lados */
@@ -747,6 +845,46 @@ position: absolute;
     margin-bottom: 20px;
   }
 }
+/* Ajuste PERFECTO en móviles 375px - compactar altura y paddings */
+/* ===== AJUSTE EXACTO PARA 375px (iPhone SE / móviles pequeños) ===== */
+@media (max-width: 550px) and (min-width: 320px){
+
+  .why {
+    padding: 20px 0 30px !important;
+  }
+
+  .why-grid {
+    padding: 0 10px !important;
+    gap: 0 !important;
+  }
+
+  .why-card {
+    padding: 22px 8px !important;
+    height: auto !important;
+  }
+
+  /* tamaño de iconos más compacto */
+  .why-icon {
+    width: 50px !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* corazón y manos también reducen */
+  .why-card:nth-child(2) .why-icon,
+  .why-card:nth-child(3) .why-icon {
+    width: 60px !important;
+  }
+
+  /* títulos compactos */
+  .why-card h3 {
+    font-size: 17px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* ya estabas ocultando el párrafo arriba de 901px, se mantiene igual */
+}
+
 
 
 /* ==========================
@@ -784,8 +922,7 @@ position: absolute;
   margin: 0 auto 60px;   /* separacion entre testimonios */
 }
 
-/* Foto circular */
-.testimonial-photo {
+/* Foto circular */.testimonial-photo {
   width: 188px;
   height: 188px;
   border-radius: 50%;
@@ -823,6 +960,34 @@ position: absolute;
   width: 52px;
   height: auto;
 }
+.testimonial-photo {
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+@media (max-width: 900px) and (min-width: 600px) {
+  .why-title,
+  .testimonials-title {
+    font-size: 34px !important;
+  }
+}
+
+/* ===== Ajuste más compacto — entre 600px y 450px ===== */
+@media (max-width: 600px) and (min-width: 450px) {
+  .why-title,
+  .testimonials-title {
+    font-size: 28px !important;
+  }
+}
+
+/* ===== MODO MÓVIL REAL — 450px hacia abajo ===== */
+@media (max-width: 450px) {
+  .why-title,
+  .testimonials-title {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 16px !important;
+  }
+}
 
 /* ====== SLIDER MÓVIL / TABLET (≤ 992px) ====== */
 
@@ -856,6 +1021,15 @@ position: absolute;
     font-size: 38px;   /* antes 48px */
     margin-bottom: 40px;
         margin-top: -100px;
+  }
+}
+
+@media (max-width: 600px) { 
+  .testimonial-photo {
+    border-radius: 50% !important;   /* o 0 si quieres cuadrada */
+    width: px !important;         /* tamaño más proporcional */
+    height: auto !important;         /* deja que respete la proporción real */
+    object-fit: contain !important;  /* evita deformación */
   }
 }
 /* ====== DESKTOP (≥ 993px) — tres testimonios en línea ====== */
@@ -919,6 +1093,141 @@ position: absolute;
     margin-top: -100px;
   }
 }
+/* ===============================================
+   AJUSTE FIGMA – TESTIMONIOS PERFECTOS 510px ↓ 
+   =============================================== */
+/* ================================
+   TESTIMONIOS FIGMA – AJUSTE SUAVE
+   ================================ */
+/* ================================
+   TESTIMONIOS FIGMA – AJUSTE SUAVE
+   ================================ */
+
+/* 510px – imagen grande */
+@media (max-width: 510px) {
+
+  .testimonials-wrapper {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  .testimonial-photo {
+    width: 250px !important;
+    border-radius: 50% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+  }
+
+  .testimonial-text {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    max-width: 280px !important;
+    margin: 12px auto !important;
+  }
+
+  .testimonial-name {
+    font-size: 17px !important;
+    margin-top: 5px !important;
+  }
+
+  /* FLECHAS MÁS PEQUEÑAS Y CON ESPACIO */
+  .testimonial-arrow img {
+    width: 32px !important;
+  }
+
+  .testimonial-arrow {
+    margin: 0 8px !important;   /* se separan más del borde */
+  }
+}
+@media (max-width: 509px) and (min-width: 426px) {
+  .testimonial-photo {
+    border-radius: 50% !important;
+  }
+}
+
+/* 425px – imagen baja un poco */
+@media (max-width: 425px) {
+
+  .testimonial-photo {
+    width: 230px !important;
+    border-radius: 50% !important;
+  }
+
+  /* flechas más pequeñas */
+  .testimonial-arrow img {
+    width: 28px !important;
+  }
+
+  .testimonial-arrow {
+    margin: 0 10px !important;
+  }
+}
+
+/* 400px – sigue bajando muy poco */
+@media (max-width: 400px) {
+
+  .testimonial-photo {
+    width: 215px !important;
+  }
+
+  /* flechas más pequeñas */
+  .testimonial-arrow img {
+    width: 26px !important;
+  }
+
+  .testimonial-arrow {
+    margin: 0 12px !important;
+  }
+}
+
+/* 375px – tamaño final FIGMA (GRANDE) */
+@media (max-width: 375px) {
+
+  .testimonial-photo {
+    width: 220px !important; 
+    margin-bottom: 10px !important;
+  }
+
+  .testimonial-text {
+    font-size: 15px !important;
+    max-width: 260px !important;
+    line-height: 1.25 !important;
+  }
+
+  .testimonial-name {
+    font-size: 16px !important;
+  }
+
+  /* flechas finales en proporción exacta */
+  .testimonial-arrow img {
+    width: 24px !important;
+  }
+
+  .testimonial-arrow {
+    margin: 0 14px !important;
+  }
+}
+/* TESTIMONIOS — dar más aire arriba desde 550px hacia abajo */
+@media (max-width: 550px) {
+  .testimonials {
+    padding-top: 20px !important; /* antes estaba muy pegado */
+  }
+
+  .testimonials-title {
+    margin-top: 0 !important; /* por si algún estilo anterior lo empujaba */
+  }
+}
+
+/* ¿POR QUÉ ELEGIRNOS? — darle más espacio debajo del título en móvil */
+@media (max-width: 550px) {
+  .why-title {
+    margin-bottom: 28px !important; /* antes estaba muy pegado */
+  }
+}
+
 
 
 /* =========================

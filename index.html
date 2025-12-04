@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+<div id="overlay"></div>
 <body>
     <header>
   <div class="container header-content">
@@ -18,7 +19,7 @@
     </div>
 
     <nav class="nav">
-      <a href="#">Inicio</a>
+      <a href="#" class="active">Inicio</a>
       <a href="#">Nosotros</a>
       <a href="#">Especialidades</a>
       <a href="#">Doctores</a>
@@ -272,17 +273,26 @@
   </div>
 </footer>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  const overlay = document.getElementById('overlay');
 
-    if (!toggle || !nav) return;
+  if (!toggle || !nav || !overlay) return;
 
-    toggle.addEventListener('click', function () {
-      nav.classList.toggle('nav--open');
-    });
+  toggle.addEventListener('click', function () {
+    nav.classList.toggle('nav--open');
+    overlay.classList.toggle('overlay--active');
   });
+
+  // CERRAR menú al hacer click en el overlay
+  overlay.addEventListener('click', function () {
+    nav.classList.remove('nav--open');
+    overlay.classList.remove('overlay--active');
+  });
+});
 </script>
+
 <script>
   (function () {
     const cards = document.querySelectorAll('.testimonial-card');
