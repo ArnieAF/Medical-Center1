@@ -6,6 +6,7 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="nosotros.css">
+  <link rel="stylesheet" href="especialidades.css">
 </head>
 <div id="overlay"></div>
 <body>
@@ -20,8 +21,8 @@
 
     <nav class="nav">
       <a href="#">Inicio</a>
-      <a href="nosotros.html" class="active">Nosotros</a>
-      <a href="especialidades.html">Especialidades</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="especialidades.html" class="active">Especialidades</a>
       <a href="#">Doctores</a>
       <a href="#">Tienda</a>
     </nav>
@@ -44,95 +45,73 @@
 </header>
 
 <section class="hero-nosotros">
-  <img class="hero-img" src="img/hero-nosotros.jpg" alt="Equipo Médico">
+  <img class="hero-img" src="img/hero-especialidades.jpg" alt="Equipo Médico">
 
   <div class="hero-text">
-    <h1>NOSOTROS</h1>
-    <p>Especialistas comprometidos con tu bienestar integral.</p>
+    <h1>ESPECIALIDADES</h1>
+    <p>Atencion experta para tu salud integral</p>
   </div>
 </section>
 
-<section class="proposito">
-  <h2>NUESTRO PROPÓSITO</h2>
 
-  <div class="proposito-content">
-    <div class="proposito-text">
-      <p>
-        Unimos <strong>ciencia y calidez humana</strong> para que cada paciente se sienta escuchado,
-        comprendido y acompañado en cada etapa de su cuidado.
-      </p>
+</section>
+<section class="specialties">
+  <div class="specialties-container">
+    
 
-      <p>
-        Porque para nosotros, no solo tratamos enfermedades, <strong>cuidamos personas</strong>.
-      </p>
-    </div>
+    <div class="specialties-grid">
+      <!-- Gastroenterología -->
+      <article class="specialty-card">
+        <img src="img/esp-gastro.jpg" alt="Gastroenterología">
+        <h3>Gastroenterología</h3>
+        <p class="specialty-p">Cuidamos tu sistema digestivo con diagnósticos y tratamientos precisos para que te sientas bien de adentro hacia afuera.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
 
-    <div class="proposito-img">
-      <img src="img/proposito.jpg" alt="Doctora atendiendo paciente">
+      <!-- Reumatología -->
+      <article class="specialty-card">
+        <img src="img/esp-reumato.jpg" alt="Reumatología">
+        <h3>Reumatología</h3>
+        <p class="specialty-p">Tratamos enfermedades musculoesqueléticas y autoinmunes para mejorar tu movilidad y calidad de vida.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Nutrición -->
+      <article class="specialty-card">
+        <img src="img/esp-nutricion.jpg" alt="Nutrición">
+        <h3>Nutrición</h3>
+        <p class="specialty-p">Planes personalizados para que tu alimentación sea aliada de tu salud y bienestar.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Cardiología -->
+      <article class="specialty-card">
+        <img src="img/esp-cardio.jpg" alt="Cardiología">
+        <h3>Cardiología</h3>
+        <p class="specialty-p">Atención integral para cuidar tu corazón y prevenir enfermedades cardiovasculares.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Psiquiatría -->
+      <article class="specialty-card">
+        <img src="img/esp-psiquiatria.jpg" alt="Psiquiatría">
+        <h3>Psiquiatría</h3>
+        <p class="specialty-p">Atención especializada en salud mental, ofreciendo acompañamiento profesional y humano para tu bienestar emocional.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Infectología -->
+      <article class="specialty-card">
+        <img src="img/esp-infectologia.jpg" alt="Infectología">
+        <h3>Infectología</h3>
+        <p class="specialty-p">Diagnóstico y manejo de enfermedades infecciosas, con un enfoque seguro, actualizado y cercano.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="valores">
-  <h2>VALORES</h2>
 
-  <div class="valores-items">
-    <div class="valor">
-      <img src="img/empatia.png" alt="Empatía">
-      <p>Empatía</p>
-    </div>
-
-    <div class="valor">
-      <img src="img/profesionalismo.png" alt="Profesionalismo">
-      <p>Profesionalismo</p>
-    </div>
-
-    <div class="valor">
-      <img src="img/cercania.png" alt="Cercanía">
-      <p>Cercanía</p>
-    </div>
-
-    <div class="valor">
-      <img src="img/innovacion.png" alt="Innovación Médica">
-      <p>Innovación<br>Médica</p>
-    </div>
-
-    <div class="valor">
-      <img src="img/atencion.png" alt="Atención Integral">
-      <p>Atención<br>Integral</p>
-    </div>
-  </div>
-</section>
-
-<section class="mision-vision">
-  <div class="mision">
-    <div class="icon-box">
-      <img src="img/mision-icon.png" alt="Ícono Misión">
-    </div>
-    <h3>Misión</h3>
-    <p class="primerap">Cuidar de cada persona con ciencia, empatía y dedicación.<br><span class="segundap">Acompañamos a nuestros pacientes en cada etapa de su salud, ofreciendo diagnósticos confiables, tratamientos 
-      efectivos y un trato humano que los haga sentir escuchados y comprendidos.</span></p>
-  </div>
-
-  <div class="vision">
-    <div class="icon-box">
-      <img src="img/vision-icon.png" alt="Ícono Visión">
-    </div>
-    <h3>Visión</h3>
-    <p class="primerap">Soñamos con ser un consultorio médico donde cada paciente encuentre confianza, cercanía y esperanza.<br><span class="segundap">Queremos ser reconocidos como un espacio que une la medicina con la calidez humana.</span></p>
-  </div>
-</section>
-
-<section class="cta-cita">
-  <div class="cta-cita-content">
-    <h2>
-      AGENDA UNA CITA
-      <span>HOY MISMO</span>
-    </h2>
-    <p>Tu salud no espera. Reserva fácil y rápido en línea.</p>
-    <a href="#" class="cta-cita-btn">Agendar ahora</a>
-  </div>
-</section>
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
@@ -203,5 +182,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </body>
 </html>
-
-
