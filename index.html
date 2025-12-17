@@ -3,326 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Medical Center</title>
 </head>
-<div id="overlay"></div>
 <body>
+    <div id="overlay"></div>
+    
+    <!-- HEADER -->
     <header>
-  <div class="container header-content">
-    <div class="logo">
-      <!-- Logo completo (desktop) -->
-      <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
-      <!-- Logo solo ícono (mobile) -->
-      <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
-    </div>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
+                <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
+            </div>
 
-    <nav class="nav">
-      <a href="#" class="active">Inicio</a>
-      <a href="#">Nosotros</a>
-      <a href="#">Especialidades</a>
-      <a href="#">Doctores</a>
-      <a href="#">Tienda</a>
-    </nav>
+            <nav class="nav">
+                <a href="#" class="active">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Especialidades</a>
+                <a href="#">Doctores</a>
+                <a href="#">Tienda</a>
+            </nav>
 
-   <a 
-  href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
-  class="btn-cita"
-  target="_blank"
-  rel="noopener"
->
-  <img src="img/wsp_logo.png" alt="">
-  Agenda una cita
-</a>
+            <a href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
+               class="btn-cita"
+               target="_blank"
+               rel="noopener">
+                <img src="img/wsp_logo.png" alt="WhatsApp">
+                Agenda una cita
+            </a>
 
-    <!-- Botón hamburguesa (solo se verá en mobile) -->
-    <button class="nav-toggle" aria-label="Abrir menú">
-      <img src="img/menu.svg" alt="Menú">
-    </button>
-  </div>
-</header>
-
-<section class="doctor-inicio">
-  <img class = "doctor-img" src = "img/toma_nota.jpg" alt="Doctor toma nota">
-  <div class = "doctor-text">
-    <h1>
-      <span class="color-blanco">CIENCIA QUE CUIDA,</span>
-      <span class="color-azul">ATENCIÓN QUE ABRAZA</span>
-      <p>Cuidamos tu salud con ciencia, ética y calidz humana</p>
-    </h1>
-     <a href="#" class="btn-especialidades">Conoce nuestras especialidades</a>
-  </div>
-</section>
-<section class="about">
-  <div class="about-content">
-    <h2>¿QUIÉNES SOMOS?</h2>
-
-    <p>Unimos conocimiento médico y atención humana para cuidar de ti.</p>
-
-    <p>
-      Ofrecemos especialidades en
-      <span class="especialidad">Gastroenterología</span>,
-      <span class="especialidad">Reumatología</span>,
-      <span class="especialidad">Nutrición</span>,
-      <span class="especialidad">Cardiología</span>,
-      <span class="especialidad">Psiquiatría</span> e
-      <span class="especialidad">Infectología</span>, siempre con el compromiso
-      de escucharte, comprenderte y acompañarte hacia una mejor calidad de vida.
-    </p>
-  </div>
-
-  <!-- imagen independiente, NO afecta el texto -->
-  <img src="img/doctores.png" alt="Equipo médico" class="about-img">
-</section>
-<section class="specialties">
-  <div class="specialties-container">
-    <h2 class="specialties-title">NUESTRAS ESPECIALIDADES</h2>
-
-    <div class="specialties-grid">
-      <!-- Gastroenterología -->
-      <article class="specialty-card">
-        <img src="img/esp-gastro.jpg" alt="Gastroenterología">
-        <h3>Gastroenterología</h3>
-        <a href="#" class="btn-vermas">Ver más</a>
-      </article>
-
-      <!-- Reumatología -->
-      <article class="specialty-card">
-        <img src="img/esp-reumato.jpg" alt="Reumatología">
-        <h3>Reumatología</h3>
-        <a href="#" class="btn-vermas">Ver más</a>
-      </article>
-
-      <!-- Nutrición -->
-      <article class="specialty-card">
-        <img src="img/esp-nutricion.jpg" alt="Nutrición">
-        <h3>Nutrición</h3>
-        <a href="#" class="btn-vermas">Ver más</a>
-      </article>
-
-      <!-- Cardiología -->
-      <article class="specialty-card">
-        <img src="img/esp-cardio.jpg" alt="Cardiología">
-        <h3>Cardiología</h3>
-        <a href="#" class="btn-vermas">Ver más</a>
-      </article>
-
-      <!-- Psiquiatría -->
-      <article class="specialty-card">
-        <img src="img/esp-psiquiatria.jpg" alt="Psiquiatría">
-        <h3>Psiquiatría</h3>
-        <a href="#" class="btn-vermas">Ver más</a>
-      </article>
-
-      <!-- Infectología -->
-      <article class="specialty-card">
-        <img src="img/esp-infectologia.jpg" alt="Infectología">
-        <h3>Infectología</h3>
-        <a href="#" class="btn-vermas">Ver más</a>
-      </article>
-    </div>
-  </div>
-</section>
-<section class="why">
-  <h2 class="why-title">¿POR QUÉ ELEGIRNOS?</h2>
-
-  <div class="why-grid">
-
-    <!-- CARD 1 -->
-    <article class="why-card why-card--blue">
-      <img src="img/lupa.svg" class="why-icon" alt="Diagnóstico preciso" class="why-icon">
-      <h3>Diagnóstico Preciso</h3>
-      <p>
-        Evaluamos cada caso con rigurosidad médica y
-        tecnología actualizada para brindarte la mejor atención.
-      </p>
-    </article>
-
-    <!-- CARD 2 -->
-    <article class="why-card why-card--green">
-      <img src="img/corazon.svg" class="why-icon" alt="Atención integral" class="why-icon">
-      <h3>Atención Integral</h3>
-      <p>
-        No solo tratamos síntomas, cuidamos tu bienestar
-        físico y emocional en cada consulta.
-      </p>
-    </article>
-
-    <!-- CARD 3 -->
-    <article class="why-card why-card--light">
-      <img src="img/manos.svg" class="why-icon" alt="Trato humano y cercano" class="why-icon">
-      <h3>Trato humano y cercano</h3>
-      <p>
-        Escuchamos, comprendemos y cuidamos de ti con
-        empatía y respeto.
-      </p>
-    </article>
-
-  </div>
-</section>
-<section class="testimonials">
-  <h2 class="testimonials-title">TESTIMONIOS</h2>
-
-  <div class="testimonials-wrapper">
-    <!-- Flecha izquierda -->
-    <button class="testimonial-arrow arrow-left" aria-label="Testimonio anterior">
-      <img src="img/flecha-izq.svg" alt="">
-    </button>
-
-    <!-- Card 1 -->
-    <article class="testimonial-card">
-      <img
-        src="img/jorge.png"
-        alt="Jorge, 62 años"
-        class="testimonial-photo"
-      >
-      <p class="testimonial-text">
-        “En Medical Center me sentí cuidado y respetado en todo momento.”
-      </p>
-      <p class="testimonial-name">— Jorge, 62 años</p>
-    </article>
-
-    <!-- Card 2 -->
-    <article class="testimonial-card">
-      <img
-        src="img/helena.png"
-        alt="Helena, 48 años"
-        class="testimonial-photo"
-      >
-      <p class="testimonial-text">
-        “Desde la primera consulta sentí que me escuchaban de verdad.
-        Me explicaron todo con paciencia y claridad.”
-      </p>
-      <p class="testimonial-name">— Helena, 48 años</p>
-    </article>
-
-    <!-- Card 3 -->
-    <article class="testimonial-card">
-      <img
-        src="img/alfonso.png"
-        alt="Alfonso, 42 años"
-        class="testimonial-photo"
-      >
-      <p class="testimonial-text">
-        “Su trato es humano y profesional. Me ayudaron a entender mi diagnóstico
-        y me sentí acompañado todo el tiempo.”
-      </p>
-      <p class="testimonial-name">— Alfonso, 42 años</p>
-    </article>
-
-    <!-- Flecha derecha -->
-    <button class="testimonial-arrow arrow-right" aria-label="Siguiente testimonio">
-      <img src="img/flecha-der.svg" alt="">
-    </button>
-  </div>
-</section>
-<section class="cta-cita">
-  <div class="cta-cita-content">
-    <h2>
-      AGENDA UNA CITA
-      <span>HOY MISMO</span>
-    </h2>
-    <p>Tu salud no espera. Reserva fácil y rápido en línea.</p>
-    <a href="#" class="cta-cita-btn">Agendar ahora</a>
-  </div>
-</section>
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <!-- Columna izquierda: Ubícanos / Correo -->
-    <div class="footer-col">
-      <h3>UBÍCANOS</h3>
-      <div class="footer-item">
-        <!-- icono: ubicacion.png -->
-        <img src="img/ubicacion.svg" alt="Ubicación" class="footer-icon">
-        <p>Av. Alberto Alexander 2476, Lince</p>
-      </div>
-
-      <h3 class="footer-subtitle">CORREO</h3>
-      <div class="footer-item">
-        <!-- icono: mensaje.png -->
-        <img src="img/mensaje.svg" alt="Correo" class="footer-icon">
-        <p>medicalcenter@gmail.com</p>
-      </div>
-    </div>
-
-    <!-- Columna derecha: Horario -->
-    <div class="footer-col">
-      <h3>HORARIO DE ATENCIÓN</h3>
-      <div class="footer-item">
-        <!-- icono: hora.png -->
-        <img src="img/hora.svg" alt="Horario" class="footer-icon">
-
-        <div class="footer-hours">
-          <p>
-            Lunes a Viernes:<br>
-            <span>09:00 am - 7:00 pm</span>
-          </p>
-          <p>
-            Sábados y Domingos:<br>
-            <span>12:00 pm - 3:00 pm</span>
-          </p>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <img src="img/menu.svg" alt="Menú">
+            </button>
         </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <div class="footer-bottom">
-    Todos los derechos reservados &copy; 2025
-  </div>
-</footer>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  const overlay = document.getElementById('overlay');
+    <!-- HERO SECTION -->
+    <section class="doctor-inicio">
+        <img class="doctor-img" src="img/toma_nota.jpg" alt="Doctor toma nota">
+        <div class="doctor-text">
+            <h1>
+                <span class="color-blanco">CIENCIA QUE CUIDA,</span>
+                <span class="color-azul">ATENCIÓN QUE ABRAZA</span>
+                <p>Cuidamos tu salud con ciencia, ética y calidz humana</p>
+            </h1>
+            <a href="#" class="btn-especialidades">Conoce nuestras especialidades</a>
+        </div>
+    </section>
 
-  if (!toggle || !nav || !overlay) return;
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="about-content">
+            <h2>¿QUIÉNES SOMOS?</h2>
+            <p>Unimos conocimiento médico y atención humana para cuidar de ti.</p>
+            <p>
+                Ofrecemos especialidades en
+                <span class="especialidad">Gastroenterología</span>,
+                <span class="especialidad">Reumatología</span>,
+                <span class="especialidad">Nutrición</span>,
+                <span class="especialidad">Cardiología</span>,
+                <span class="especialidad">Psiquiatría</span> e
+                <span class="especialidad">Infectología</span>, siempre con el compromiso
+                de escucharte, comprenderte y acompañarte hacia una mejor calidad de vida.
+            </p>
+        </div>
+        <img src="img/doctores.png" alt="Equipo médico" class="about-img">
+    </section>
 
-  toggle.addEventListener('click', function () {
-    nav.classList.toggle('nav--open');
-    overlay.classList.toggle('overlay--active');
-  });
+    <!-- SPECIALTIES SECTION -->
+    <section class="specialties">
+        <div class="specialties-container">
+            <h2 class="specialties-title">NUESTRAS ESPECIALIDADES</h2>
+            <div class="specialties-grid">
+                <article class="specialty-card">
+                    <img src="img/esp-gastro.jpg" alt="Gastroenterología">
+                    <h3>Gastroenterología</h3>
+                    <a href="#" class="btn-vermas">Ver más</a>
+                </article>
+                <article class="specialty-card">
+                    <img src="img/esp-reumato.jpg" alt="Reumatología">
+                    <h3>Reumatología</h3>
+                    <a href="#" class="btn-vermas">Ver más</a>
+                </article>
+                <article class="specialty-card">
+                    <img src="img/esp-nutricion.jpg" alt="Nutrición">
+                    <h3>Nutrición</h3>
+                    <a href="#" class="btn-vermas">Ver más</a>
+                </article>
+                <article class="specialty-card">
+                    <img src="img/esp-cardio.jpg" alt="Cardiología">
+                    <h3>Cardiología</h3>
+                    <a href="#" class="btn-vermas">Ver más</a>
+                </article>
+                <article class="specialty-card">
+                    <img src="img/esp-psiquiatria.jpg" alt="Psiquiatría">
+                    <h3>Psiquiatría</h3>
+                    <a href="#" class="btn-vermas">Ver más</a>
+                </article>
+                <article class="specialty-card">
+                    <img src="img/esp-infectologia.jpg" alt="Infectología">
+                    <h3>Infectología</h3>
+                    <a href="#" class="btn-vermas">Ver más</a>
+                </article>
+            </div>
+        </div>
+    </section>
 
-  // CERRAR menú al hacer click en el overlay
-  overlay.addEventListener('click', function () {
-    nav.classList.remove('nav--open');
-    overlay.classList.remove('overlay--active');
-  });
-});
-</script>
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="why">
+        <h2 class="why-title">¿POR QUÉ ELEGIRNOS?</h2>
+        <div class="why-grid">
+            <article class="why-card why-card--blue">
+                <img src="img/lupa.svg" class="why-icon" alt="Diagnóstico preciso">
+                <h3>Diagnóstico Preciso</h3>
+                <p>
+                    Evaluamos cada caso con rigurosidad médica y
+                    tecnología actualizada para brindarte la mejor atención.
+                </p>
+            </article>
+            <article class="why-card why-card--green">
+                <img src="img/corazon.svg" class="why-icon" alt="Atención integral">
+                <h3>Atención Integral</h3>
+                <p>
+                    No solo tratamos síntomas, cuidamos tu bienestar
+                    físico y emocional en cada consulta.
+                </p>
+            </article>
+            <article class="why-card why-card--light">
+                <img src="img/manos.svg" class="why-icon" alt="Trato humano y cercano">
+                <h3>Trato humano y cercano</h3>
+                <p>
+                    Escuchamos, comprendemos y cuidamos de ti con
+                    empatía y respeto.
+                </p>
+            </article>
+        </div>
+    </section>
 
-<script>
-  (function () {
-    const cards = document.querySelectorAll('.testimonial-card');
-    const btnPrev = document.querySelector('.arrow-left');
-    const btnNext = document.querySelector('.arrow-right');
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials">
+        <h2 class="testimonials-title">TESTIMONIOS</h2>
+        <div class="testimonials-wrapper">
+            <button class="testimonial-arrow arrow-left" aria-label="Testimonio anterior">
+                <img src="img/flecha-izq.svg" alt="Anterior">
+            </button>
+            
+            <article class="testimonial-card">
+                <img src="img/jorge.png" alt="Jorge, 62 años" class="testimonial-photo">
+                <p class="testimonial-text">
+                    “En Medical Center me sentí cuidado y respetado en todo momento.”
+                </p>
+                <p class="testimonial-name">— Jorge, 62 años</p>
+            </article>
+            
+            <article class="testimonial-card">
+                <img src="img/helena.png" alt="Helena, 48 años" class="testimonial-photo">
+                <p class="testimonial-text">
+                    “Desde la primera consulta sentí que me escuchaban de verdad.
+                    Me explicaron todo con paciencia y claridad.”
+                </p>
+                <p class="testimonial-name">— Helena, 48 años</p>
+            </article>
+            
+            <article class="testimonial-card">
+                <img src="img/alfonso.png" alt="Alfonso, 42 años" class="testimonial-photo">
+                <p class="testimonial-text">
+                    “Su trato es humano y profesional. Me ayudaron a entender mi diagnóstico
+                    y me sentí acompañado todo el tiempo.”
+                </p>
+                <p class="testimonial-name">— Alfonso, 42 años</p>
+            </article>
+            
+            <button class="testimonial-arrow arrow-right" aria-label="Siguiente testimonio">
+                <img src="img/flecha-der.svg" alt="Siguiente">
+            </button>
+        </div>
+    </section>
 
-    if (!cards.length || !btnPrev || !btnNext) return;
+    <!-- CTA SECTION -->
+    <section class="cta-cita">
+        <div class="cta-cita-content">
+            <h2>
+                AGENDA UNA CITA
+                <span>HOY MISMO</span>
+            </h2>
+            <p>Tu salud no espera. Reserva fácil y rápido en línea.</p>
+            <a href="#" class="cta-cita-btn">Agendar ahora</a>
+        </div>
+    </section>
 
-    let currentIndex = 0;
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>UBÍCANOS</h3>
+                <div class="footer-item">
+                    <img src="img/ubicacion.svg" alt="Ubicación" class="footer-icon">
+                    <p>Av. Alberto Alexander 2476, Lince</p>
+                </div>
+                <h3 class="footer-subtitle">CORREO</h3>
+                <div class="footer-item">
+                    <img src="img/mensaje.svg" alt="Correo" class="footer-icon">
+                    <p>medicalcenter@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>HORARIO DE ATENCIÓN</h3>
+                <div class="footer-item">
+                    <img src="img/hora.svg" alt="Horario" class="footer-icon">
+                    <div class="footer-hours">
+                        <p>
+                            Lunes a Viernes:<br>
+                            <span>09:00 am - 7:00 pm</span>
+                        </p>
+                        <p>
+                            Sábados y Domingos:<br>
+                            <span>12:00 pm - 3:00 pm</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            Todos los derechos reservados &copy; 2025
+        </div>
+    </footer>
 
-    function showCard(index) {
-      cards.forEach((card, i) => {
-        card.classList.toggle('active', i === index);
-      });
-    }
+    <!-- SCRIPTS -->
+    <script>
+        // Menú móvil
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('.nav');
+            const overlay = document.getElementById('overlay');
 
-    // Estado inicial: mostramos el primero
-    showCard(currentIndex);
+            if (!toggle || !nav || !overlay) return;
 
-    btnNext.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % cards.length;
-      showCard(currentIndex);
-    });
+            toggle.addEventListener('click', function () {
+                nav.classList.toggle('nav--open');
+                overlay.classList.toggle('overlay--active');
+            });
 
-    btnPrev.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      showCard(currentIndex);
-    });
-  })();
-</script>
+            overlay.addEventListener('click', function () {
+                nav.classList.remove('nav--open');
+                overlay.classList.remove('overlay--active');
+            });
+        });
 
+        // Testimonios slider
+        (function () {
+            const cards = document.querySelectorAll('.testimonial-card');
+            const btnPrev = document.querySelector('.arrow-left');
+            const btnNext = document.querySelector('.arrow-right');
+
+            if (!cards.length || !btnPrev || !btnNext) return;
+
+            let currentIndex = 0;
+
+            function showCard(index) {
+                cards.forEach((card, i) => {
+                    card.classList.toggle('active', i === index);
+                });
+            }
+
+            showCard(currentIndex);
+
+            btnNext.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                showCard(currentIndex);
+            });
+
+            btnPrev.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                showCard(currentIndex);
+            });
+        })();
+    </script>
 </body>
 </html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nosotros.css">
+  <link rel="stylesheet" href="especialidades.css">
+</head>
+<div id="overlay"></div>
+<body>
+   <header>
+  <div class="container header-content">
+    <div class="logo">
+      <!-- Logo completo (desktop) -->
+      <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
+      <!-- Logo solo ícono (mobile) -->
+      <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
+    </div>
+
+    <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="especialidades.html" class="active">Especialidades</a>
+      <a href="#">Doctores</a>
+      <a href="#">Tienda</a>
+    </nav>
+
+   <a 
+  href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
+  class="btn-cita"
+  target="_blank"
+  rel="noopener"
+>
+  <img src="img/wsp_logo.png" alt="">
+  Agenda una cita
+</a>
+
+    <!-- Botón hamburguesa (solo se verá en mobile) -->
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <img src="img/menu.svg" alt="Menú">
+    </button>
+  </div>
+</header>
+
+<section class="hero-nosotros">
+  <img class="hero-img" src="img/hero-especialidades.jpg" alt="Equipo Médico">
+
+  <div class="hero-text">
+    <h1>ESPECIALIDADES</h1>
+    <p>Atencion experta para tu salud integral</p>
+  </div>
+</section>
+
+
+</section>
+<section class="specialties">
+  <div class="specialties-container">
+    
+
+    <div class="specialties-grid">
+      <!-- Gastroenterología -->
+      <article class="specialty-card">
+        <img src="img/esp-gastro.jpg" alt="Gastroenterología">
+        <h3>Gastroenterología</h3>
+        <p class="specialty-p">Cuidamos tu sistema digestivo con diagnósticos y tratamientos precisos para que te sientas bien de adentro hacia afuera.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Reumatología -->
+      <article class="specialty-card">
+        <img src="img/esp-reumato.jpg" alt="Reumatología">
+        <h3>Reumatología</h3>
+        <p class="specialty-p">Tratamos enfermedades musculoesqueléticas y autoinmunes para mejorar tu movilidad y calidad de vida.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Nutrición -->
+      <article class="specialty-card">
+        <img src="img/esp-nutricion.jpg" alt="Nutrición">
+        <h3>Nutrición</h3>
+        <p class="specialty-p">Planes personalizados para que tu alimentación sea aliada de tu salud y bienestar.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Cardiología -->
+      <article class="specialty-card">
+        <img src="img/esp-cardio.jpg" alt="Cardiología">
+        <h3>Cardiología</h3>
+        <p class="specialty-p">Atención integral para cuidar tu corazón y prevenir enfermedades cardiovasculares.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Psiquiatría -->
+      <article class="specialty-card">
+        <img src="img/esp-psiquiatria.jpg" alt="Psiquiatría">
+        <h3>Psiquiatría</h3>
+        <p class="specialty-p">Atención especializada en salud mental, ofreciendo acompañamiento profesional y humano para tu bienestar emocional.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+
+      <!-- Infectología -->
+      <article class="specialty-card">
+        <img src="img/esp-infectologia.jpg" alt="Infectología">
+        <h3>Infectología</h3>
+        <p class="specialty-p">Diagnóstico y manejo de enfermedades infecciosas, con un enfoque seguro, actualizado y cercano.</p>
+        <a href="#" class="btn-vermas">Ver más</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <!-- Columna izquierda: Ubícanos / Correo -->
+    <div class="footer-col">
+      <h3>UBÍCANOS</h3>
+      <div class="footer-item">
+        <!-- icono: ubicacion.png -->
+        <img src="img/ubicacion.svg" alt="Ubicación" class="footer-icon">
+        <p>Av. Alberto Alexander 2476, Lince</p>
+      </div>
+
+      <h3 class="footer-subtitle">CORREO</h3>
+      <div class="footer-item">
+        <!-- icono: mensaje.png -->
+        <img src="img/mensaje.svg" alt="Correo" class="footer-icon">
+        <p>medicalcenter@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Columna derecha: Horario -->
+    <div class="footer-col">
+      <h3>HORARIO DE ATENCIÓN</h3>
+      <div class="footer-item">
+        <!-- icono: hora.png -->
+        <img src="img/hora.svg" alt="Horario" class="footer-icon">
+
+        <div class="footer-hours">
+          <p>
+            Lunes a Viernes:<br>
+            <span>09:00 am - 7:00 pm</span>
+          </p>
+          <p>
+            Sábados y Domingos:<br>
+            <span>12:00 pm - 3:00 pm</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Todos los derechos reservados &copy; 2025
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  const overlay = document.getElementById('overlay');
+
+  if (!toggle || !nav || !overlay) return;
+
+  toggle.addEventListener('click', function () {
+    nav.classList.toggle('nav--open');
+    overlay.classList.toggle('overlay--active');
+  });
+
+  // CERRAR menú al hacer click en el overlay
+  overlay.addEventListener('click', function () {
+    nav.classList.remove('nav--open');
+    overlay.classList.remove('overlay--active');
+  });
+});
+</script>
+
+
+</body>
+</html>
