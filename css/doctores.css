@@ -310,7 +310,7 @@ header {
 }
 
 .doctor-card {
-  background-size: cover;  /* Asegura que la imagen cubra todo el fondo */
+  background-size: cover;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -321,6 +321,7 @@ header {
   height: 279px;
   position: relative;
 }
+
 .doctor-card::before {
   content: '';
   position: absolute;
@@ -328,7 +329,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('img/fondo-doctor.jpg') no-repeat center center;
+  background: url('../img/jpg/fondo-doctor.jpg') no-repeat center center;
   background-size: cover;
   z-index: 1;
 }
@@ -341,7 +342,7 @@ header {
   bottom: 0;
  background: 
     linear-gradient(128.71deg, rgba(193, 221, 158, 0.5) 17.78%, rgba(29, 64, 95, 0.6) 82.22%),
-    url('img/fondo-doctor.jpg') no-repeat center center;  z-index: 2;
+    url('../img/jpg/fondo-doctor.jpg') no-repeat center center;  z-index: 2;
 }
 .doctor-card > * {
   position: relative;
@@ -355,7 +356,7 @@ header {
   height: 100%; /* Ajusté la altura de la imagen */
   object-fit: contain;  /* Asegura que la imagen se ajuste correctamente sin recortarse */
   margin-top: 20px;
-  margin-left: -76px;  /* Separación entre la imagen y el texto */
+  margin-left: -57px;  /* Separación entre la imagen y el texto */
 }
 
 .doctor-info {
@@ -365,6 +366,7 @@ header {
   justify-content: space-between;
   flex-grow: 1;
   height: 100%; 
+  width: 400px;
   padding: 10px 0;
 }
 
@@ -390,20 +392,23 @@ header {
 .btn-ver-perfil {
   display: inline-block;
   margin-top: 15px;  /* Espacio entre el texto y el botón */
-  padding: 10px 18px;  /* Ajuste de los márgenes internos del botón */
-background: linear-gradient(90deg, #C1DD9E 0%, #D9EAC4 100%);
+  padding: 8px 16px;  /* Reducir el espacio interno para hacerlo más pequeño */
+  background: linear-gradient(90deg, #C1DD9E 0%, #D9EAC4 100%);
   color: #FFFFFF;  /* Color del texto */
   text-decoration: none;  /* Eliminar subrayado */
   border-radius: 20px;  /* Bordes redondeados */
   font-weight: 600;  /* Peso de la fuente */
-  font-size: 16px;  /* Tamaño del texto */
+  font-size: 14px;  /* Reducir el tamaño del texto */
   text-align: center;  /* Centrado del texto */
+  width: 197px;
+  
 }
 
 .btn-ver-perfil:hover {
   background: linear-gradient(90deg, #1D405F 17.78%, #0AF0A5 82.22%);  /* Efecto hover para el gradiente */
   cursor: pointer;
 }
+
 
 
 /* Mobile Responsiveness */
