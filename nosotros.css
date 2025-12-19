@@ -315,6 +315,7 @@ header {
 
 /* Contenido del texto sobre el gradiente */
 .hero-text {
+  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -345,6 +346,10 @@ header {
     height: 100%; /* Asegura que la imagen cubra todo el fondo */
   }
 
+  .hero-text{
+      width: 90%;
+  }
+
   .hero-text h1 {
     font-size: 20px !important; /* Reducir tamaño del título */
   }
@@ -362,12 +367,15 @@ header {
 
 /* Media query para pantallas medianas (hasta 460px) */
 @media (max-width: 760px) {
+  .hero-text{
+      width: 90%;
+  }
   .hero-text h1 {
-    font-size: 32px; /* Ajustar tamaño del título */
+    font-size: 30px; /* Ajustar tamaño del título */
   }
 
   .hero-text p {
-    font-size: 15px; /* Ajustar tamaño del texto */
+    font-size: 13px; /* Ajustar tamaño del texto */
   }
 
   .hero-nosotros {

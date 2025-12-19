@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nosotros.css">
+  <link rel="stylesheet" href="especialidades.css">
+  <link rel="stylesheet" href="doctores.css">
+</head>
+<div id="overlay"></div>
+<body>
+   <header>
+  <div class="container header-content">
+    <div class="logo">
+      <!-- Logo completo (desktop) -->
+      <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
+      <!-- Logo solo ícono (mobile) -->
+      <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="especialidades.html" >Especialidades</a>
+                <a href="doctores.html" class="active">Doctores</a>
+                <a href="tienda.html">Tienda</a>
+    </nav>
+
+   <a 
+  href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
+  class="btn-cita"
+  target="_blank"
+  rel="noopener"
+>
+  <img src="img/wsp_logo.png" alt="">
+  Agenda una cita
+</a>
+
+    <!-- Botón hamburguesa (solo se verá en mobile) -->
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <img src="img/menu.svg" alt="Menú">
+    </button>
+  </div>
+</header>
+
+<section class="hero-nosotros">
+  <img class="hero-img" src="img/2doc.png" alt="Equipo Médico">
+
+  <div class="hero-text">
+    <h1>DOCTORES</h1>
+    <p>Profesionales capacitados, cercanos y listos para atenderte</p>
+  </div>
+</section>
+<section class="doctores-section">
+  <div class="doctor-card">
+    <img class="doctor-img" src="img/dc1.png" alt="Dr. Royer Adriano">
+    <div class="doctor-info">
+      <h3>Dr. Royer Adriano</h3>
+      <p>Gastroenterología</p>
+      <a href="perfil.html" class="btn-ver-perfil">Ver perfil completo</a>
+    </div>
+  </div>
+  <div class="doctor-card">
+    <img class="doctor-img" src="img/dc2.png" alt="Dra. Delinda de la Cruz">
+    <div class="doctor-info">
+      <h3>Dr. Delinda de la Cruz</h3>
+      <p>Reumatología</p>
+      <a href="perfil.html" class="btn-ver-perfil">Ver perfil completo</a>
+    </div>
+  </div>
+  <div class="doctor-card">
+    <img class="doctor-img" src="img/dc3.png" alt="Dr. Pierina Papadopulos">
+    <div class="doctor-info">
+      <h3>Dr. Pierina Papadopulos</h3>
+      <p>Nutrición</p>
+      <a href="perfil.html" class="btn-ver-perfil">Ver perfil completo</a>
+    </div>
+  </div>
+  <div class="doctor-card">
+    <img class="doctor-img" src="img/dc4.png" alt="Dr. María Renée">
+    <div class="doctor-info">
+      <h3>Dr. María Renée</h3>
+      <p>Cardiología</p>
+      <a href="perfil.html" class="btn-ver-perfil">Ver perfil completo</a>
+    </div>
+  </div>
+  <div class="doctor-card">
+    <img class="doctor-img" src="img/dc5.png" alt="Dr. Ana Torres">
+    <div class="doctor-info">
+      <h3>Dr. Ana Torres</h3>
+      <p>Psiquiatría</p>
+      <a href="perfil.html" class="btn-ver-perfil">Ver perfil completo</a>
+    </div>
+  </div>
+   <div class="doctor-card">
+    <img class="doctor-img" src="img/dc5.png" alt="Dr. Ana Torres">
+    <div class="doctor-info">
+      <h3>Dr. Ana Torres</h3>
+      <p>Psiquiatría</p>
+      <a href="perfil.html" class="btn-ver-perfil">Ver perfil completo</a>
+    </div>
+  </div>
+</section>
+ <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>UBÍCANOS</h3>
+                <div class="footer-item">
+                    <img src="img/ubicacion.svg" alt="Ubicación" class="footer-icon">
+                    <p>Av. Alberto Alexander 2476, Lince</p>
+                </div>
+                <h3 class="footer-subtitle">CORREO</h3>
+                <div class="footer-item">
+                    <img src="img/mensaje.svg" alt="Correo" class="footer-icon">
+                    <p>medicalcenter@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>HORARIO DE ATENCIÓN</h3>
+                <div class="footer-item">
+                    <img src="img/hora.svg" alt="Horario" class="footer-icon">
+                    <div class="footer-hours">
+                        <p>
+                            Lunes a Viernes:<br>
+                            <span>09:00 am - 7:00 pm</span>
+                        </p>
+                        <p>
+                            Sábados y Domingos:<br>
+                            <span>12:00 pm - 3:00 pm</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            Todos los derechos reservados &copy; 2025
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Menú móvil
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('.nav');
+            const overlay = document.getElementById('overlay');
+
+            if (!toggle || !nav || !overlay) return;
+
+            toggle.addEventListener('click', function () {
+                nav.classList.toggle('nav--open');
+                overlay.classList.toggle('overlay--active');
+            });
+
+            overlay.addEventListener('click', function () {
+                nav.classList.remove('nav--open');
+                overlay.classList.remove('overlay--active');
+            });
+        });
+
+        // Testimonios slider
+        (function () {
+            const cards = document.querySelectorAll('.testimonial-card');
+            const btnPrev = document.querySelector('.arrow-left');
+            const btnNext = document.querySelector('.arrow-right');
+
+            if (!cards.length || !btnPrev || !btnNext) return;
+
+            let currentIndex = 0;
+
+            function showCard(index) {
+                cards.forEach((card, i) => {
+                    card.classList.toggle('active', i === index);
+                });
+            }
+
+            showCard(currentIndex);
+
+            btnNext.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                showCard(currentIndex);
+            });
+
+            btnPrev.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                showCard(currentIndex);
+            });
+        })();
+    </script>
+
+</body>
+</html>

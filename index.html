@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Medical Center</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nosotros.css">
+  <link rel="stylesheet" href="especialidades.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+<div id="overlay"></div>
 <body>
-    <div id="overlay"></div>
-    
-    <!-- HEADER -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
-                <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
-            </div>
+   <header>
+  <div class="container header-content">
+    <div class="logo">
+      <!-- Logo completo (desktop) -->
+      <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
+      <!-- Logo solo ícono (mobile) -->
+      <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
+    </div>
 
-            <nav class="nav">
-                <a href="index.html" class="active">Inicio</a>
+    <nav class="nav">
+      <a href="index.html" class="active">Inicio</a>
                 <a href="nosotros.html">Nosotros</a>
-                <a href="especialidades.html">Especialidades</a>
-                <a href="#">Doctores</a>
-                <a href="#">Tienda</a>
-            </nav>
+                <a href="especialidades.html" >Especialidades</a>
+                <a href="doctores.html">Doctores</a>
+                <a href="tienda.html">Tienda</a>
+    </nav>
 
-            <a href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
-               class="btn-cita"
-               target="_blank"
-               rel="noopener">
-                <img src="img/wsp_logo.png" alt="WhatsApp">
-                Agenda una cita
-            </a>
+   <a 
+  href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
+  class="btn-cita"
+  target="_blank"
+  rel="noopener"
+>
+  <img src="img/wsp_logo.png" alt="">
+  Agenda una cita
+</a>
 
-            <button class="nav-toggle" aria-label="Abrir menú">
-                <img src="img/menu.svg" alt="Menú">
-            </button>
-        </div>
-    </header>
+    <!-- Botón hamburguesa (solo se verá en mobile) -->
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <img src="img/menu.svg" alt="Menú">
+    </button>
+  </div>
+</header>
 
-    <!-- HERO SECTION -->
-    <section class="doctor-inicio">
-        <img class="doctor-img" src="img/toma_nota.jpg" alt="Doctor toma nota">
-        <div class="doctor-text">
-            <h1>
-                <span class="color-blanco">CIENCIA QUE CUIDA,</span>
-                <span class="color-azul">ATENCIÓN QUE ABRAZA</span>
-                <p>Cuidamos tu salud con ciencia, ética y calidz humana</p>
-            </h1>
-            <a href="#" class="btn-especialidades">Conoce nuestras especialidades</a>
-        </div>
-    </section>
+<section class="hero-nosotros">
+  <img class="hero-img" src="img/toma_nota.jpg" alt="Equipo Médico">
+
+  <div class="hero-text">
+    <h1><span class="ciencia-blanca">CIENCIA QUE CUIDA, </span><span class="atencion-verde">ATENCIÓN QUE ABRAZA</span></h1>
+    <p>Cuidamos tu salud con ciencia, ética y calidez humana</p>
+  </div>
+</section>
 
     <!-- ABOUT SECTION -->
     <section class="about">

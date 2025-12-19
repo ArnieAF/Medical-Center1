@@ -45,18 +45,20 @@ header {
   width: 100%;
 }
 
+/* Logo */
+.logo-mobile {
+  display: none;
+  width: 70px;
+  height: auto;
+}
+
 .logo img {
   width: 233px;
   height: 72px;
-  
 }
 
 .logo-desktop {
   display: block;
-}
-
-.logo-mobile {
-  display: none;
 }
 
 /* ============================
@@ -163,7 +165,7 @@ header {
 
 }
 .doctor-text {
-  width: 60%;
+  width: 100% !;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -179,10 +181,12 @@ header {
   text-shadow: 0px 2px 4px #00000033;
 }
 
-.color-blanco,
-.color-azul {
-  font-size: 60px;
-  font-weight: 800;
+.ciencia-blanca {
+  color: white; /* Hace que "CIENCIA QUE CUIDA" sea blanco */
+}
+
+.atencion-verde {
+  color: #C1DD9E; /* Mantiene "ATENCIÓN QUE ABRAZA" en verde */
 }
 
 .color-blanco {
@@ -1025,108 +1029,18 @@ header {
   }
 }
 
-/* HEADER RESPONSIVE */
-@media (max-width: 1258px) and (min-width: 1075px) {
-  header {
-    padding: 30px 0;
-  }
-  .container {
-    width: 95%;
-    max-width: 1100px;
-  }
-  .logo-mobile,
-  .logo-desktop {
-    margin-left: 10px;
-  }
-}
-
-@media (max-width: 1074px) {
-  header {
-    padding: 20px 0;
-  }
-  .container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-  }
-  .logo-desktop {
-    display: none;
-  }
-  .logo-mobile {
-    display: block;
-    width: 62px;
-    height: auto;
-  }
-  .nav-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .btn-cita {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin-left: 38px;
-    height: auto;
-    padding: 10px 24px;
-    width: auto;
-    font-size: 14px;
-    gap: 8px;
-    border-radius: 20px;
-    white-space: nowrap;
-  }
-  .btn-cita img {
-    width: 18px;
-    height: 18px;
-  }
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 20px 0 24px;
-    border-top: 1px solid #e5e5e5;
-    z-index: 1000;
-  }
-  .nav a {
-    font-size: 16px;
-  }
-  .nav.nav--open {
-    display: flex;
-  }
-  header {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .header-content {
-    padding-left: 0;
-  }
-  .logo-mobile {
-    margin-left: -23px;
-  }
-}
-
+/* Header Mobile (440px and below) */
 @media (max-width: 440px) {
   .header-content {
     gap: 0;
   }
+
   .logo-mobile {
     width: 58px;
     flex-shrink: 0;
-    margin-left: 20px !important;
+    margin-left: 5px !important;
   }
+
   .btn-cita {
     position: static !important;
     transform: none !important;
@@ -1140,33 +1054,40 @@ header {
     width: auto;
     height: auto;
   }
+
   .btn-cita img {
     width: 14px;
     height: 14px;
   }
+
   .nav-toggle {
     flex-shrink: 0;
   }
+
   .nav-toggle img {
     width: 28px;
   }
 }
 
+/* Fine adjustment (425px to 400px) */
 @media (max-width: 425px) and (min-width: 400px) {
   .btn-cita {
     margin-right: 30px !important;
   }
 }
 
+/* Mobile Logo (768px and below) */
 @media (max-width: 768px) {
   .logo-desktop {
     display: none;
   }
+
   .logo-mobile {
     display: block;
   }
 }
-/* Header specific adjustments */
+
+/* Header specific adjustments for tablet */
 @media (max-width: 1258px) and (min-width: 1075px) {
   header {
     padding: 30px 0;
@@ -1183,6 +1104,7 @@ header {
   }
 }
 
+/* Tablet and Mobile Header (1074px and below) */
 @media (max-width: 1074px) {
   header {
     padding: 20px 0;
@@ -1271,4 +1193,9 @@ header {
   .logo-mobile {
     margin-left: -23px;
   }
+}
+
+/* For mobile menu JavaScript functionality */
+.nav.nav--open {
+  display: flex;
 }
