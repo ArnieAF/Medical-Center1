@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="nosotros.css">
+  <link rel="stylesheet" href="../css/nosotros.css">
 </head>
 <div id="overlay"></div>
 <body>
@@ -13,9 +13,9 @@
   <div class="container header-content">
     <div class="logo">
       <!-- Logo completo (desktop) -->
-      <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
+      <img src="../img/png/logo.png" alt="Medical Center" class="logo-desktop">
       <!-- Logo solo ícono (mobile) -->
-      <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
+      <img src="../img/svg/logo-icon.svg" alt="Medical Center" class="logo-mobile">
     </div>
 
     <nav class="nav">
@@ -32,19 +32,19 @@
   target="_blank"
   rel="noopener"
 >
-  <img src="img/wsp_logo.png" alt="">
+  <img src="../img/png/wsp_logo.png" alt="">
   Agenda una cita
 </a>
 
     <!-- Botón hamburguesa (solo se verá en mobile) -->
     <button class="nav-toggle" aria-label="Abrir menú">
-      <img src="img/menu.svg" alt="Menú">
+      <img src="../img/svg/menu.svg" alt="Menú">
     </button>
   </div>
 </header>
 
 <section class="hero-nosotros">
-  <img class="hero-img" src="img/hero-nosotros.jpg" alt="Equipo Médico">
+  <img class="hero-img" src="../img/jpg/hero-nosotros.jpg" alt="Equipo Médico">
 
   <div class="hero-text">
     <h1>NOSOTROS</h1>
@@ -68,7 +68,7 @@
     </div>
 
     <div class="proposito-img">
-      <img src="img/proposito.jpg" alt="Doctora atendiendo paciente">
+      <img src="../img/jpg/proposito.jpg" alt="Doctora atendiendo paciente">
     </div>
   </div>
 </section>
@@ -78,27 +78,27 @@
 
   <div class="valores-items">
     <div class="valor">
-      <img src="img/empatia.png" alt="Empatía">
+      <img src="../img/png/empatia.png" alt="Empatía">
       <p>Empatía</p>
     </div>
 
     <div class="valor">
-      <img src="img/profesionalismo.png" alt="Profesionalismo">
+      <img src="../img/png/profesionalismo.png" alt="Profesionalismo">
       <p>Profesionalismo</p>
     </div>
 
     <div class="valor">
-      <img src="img/cercania.png" alt="Cercanía">
+      <img src="../img/png/cercania.png" alt="Cercanía">
       <p>Cercanía</p>
     </div>
 
     <div class="valor">
-      <img src="img/innovacion.png" alt="Innovación Médica">
+      <img src="../img/png/innovacion.png" alt="Innovación Médica">
       <p>Innovación<br>Médica</p>
     </div>
 
     <div class="valor">
-      <img src="img/atencion.png" alt="Atención Integral">
+      <img src="../img/png/atencion.png" alt="Atención Integral">
       <p>Atención<br>Integral</p>
     </div>
   </div>
@@ -107,7 +107,7 @@
 <section class="mision-vision">
   <div class="mision">
     <div class="icon-box">
-      <img src="img/mision-icon.png" alt="Ícono Misión">
+      <img src="../img/png/mision-icon.png" alt="Ícono Misión">
     </div>
     <h3>Misión</h3>
     <p class="primerap">Cuidar de cada persona con ciencia, empatía y dedicación.<br><span class="segundap">Acompañamos a nuestros pacientes en cada etapa de su salud, ofreciendo diagnósticos confiables, tratamientos 
@@ -116,7 +116,7 @@
 
   <div class="vision">
     <div class="icon-box">
-      <img src="img/vision-icon.png" alt="Ícono Visión">
+      <img src="../img/png/vision-icon.png" alt="Ícono Visión">
     </div>
     <h3>Visión</h3>
     <p class="primerap">Soñamos con ser un consultorio médico donde cada paciente encuentre confianza, cercanía y esperanza.<br><span class="segundap">Queremos ser reconocidos como un espacio que une la medicina con la calidez humana.</span></p>
@@ -141,14 +141,14 @@
       <h3>UBÍCANOS</h3>
       <div class="footer-item">
         <!-- icono: ubicacion.png -->
-        <img src="img/ubicacion.svg" alt="Ubicación" class="footer-icon">
+        <img src="../img/svg/ubicacion.svg" alt="Ubicación" class="footer-icon">
         <p>Av. Alberto Alexander 2476, Lince</p>
       </div>
 
       <h3 class="footer-subtitle">CORREO</h3>
       <div class="footer-item">
         <!-- icono: mensaje.png -->
-        <img src="img/mensaje.svg" alt="Correo" class="footer-icon">
+        <img src="../img/svg/mensaje.svg" alt="Correo" class="footer-icon">
         <p>medicalcenter@gmail.com</p>
       </div>
     </div>
@@ -158,7 +158,7 @@
       <h3>HORARIO DE ATENCIÓN</h3>
       <div class="footer-item">
         <!-- icono: hora.png -->
-        <img src="img/hora.svg" alt="Horario" class="footer-icon">
+        <img src="../img/svg/hora.svg" alt="Horario" class="footer-icon">
 
         <div class="footer-hours">
           <p>
@@ -179,26 +179,7 @@
   </div>
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  const overlay = document.getElementById('overlay');
-
-  if (!toggle || !nav || !overlay) return;
-
-  toggle.addEventListener('click', function () {
-    nav.classList.toggle('nav--open');
-    overlay.classList.toggle('overlay--active');
-  });
-
-  // CERRAR menú al hacer click en el overlay
-  overlay.addEventListener('click', function () {
-    nav.classList.remove('nav--open');
-    overlay.classList.remove('overlay--active');
-  });
-});
-</script>
+<script src="../scripts/scripts.js"></script>
 
 
 </body>

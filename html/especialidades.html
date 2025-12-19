@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="nosotros.css">
-  <link rel="stylesheet" href="especialidades.css">
+  <link rel="stylesheet" href="../css/nosotros.css">
+  <link rel="stylesheet" href="../css/especialidades.css">
 </head>
 <div id="overlay"></div>
 <body>
@@ -14,9 +14,9 @@
   <div class="container header-content">
     <div class="logo">
       <!-- Logo completo (desktop) -->
-      <img src="img/logo.png" alt="Medical Center" class="logo-desktop">
+      <img src="../img/png/logo.png" alt="Medical Center" class="logo-desktop">
       <!-- Logo solo ícono (mobile) -->
-      <img src="img/logo-icon.svg" alt="Medical Center" class="logo-mobile">
+      <img src="../img/svg/logo-icon.svg" alt="Medical Center" class="logo-mobile">
     </div>
 
     <nav class="nav">
@@ -33,19 +33,19 @@
   target="_blank"
   rel="noopener"
 >
-  <img src="img/wsp_logo.png" alt="">
+  <img src="../img/png/wsp_logo.png" alt="">
   Agenda una cita
 </a>
 
     <!-- Botón hamburguesa (solo se verá en mobile) -->
     <button class="nav-toggle" aria-label="Abrir menú">
-      <img src="img/menu.svg" alt="Menú">
+      <img src="../img/svg/menu.svg" alt="Menú">
     </button>
   </div>
 </header>
 
 <section class="hero-nosotros">
-  <img class="hero-img" src="img/hero-especialidades.jpg" alt="Equipo Médico">
+  <img class="hero-img" src="../img/jpg/hero-especialidades.jpg" alt="Equipo Médico">
 
   <div class="hero-text">
     <h1>ESPECIALIDADES</h1>
@@ -60,7 +60,7 @@
     <div class="specialties-grid">
       <!-- Gastroenterología -->
       <article class="specialty-card">
-        <img src="img/esp-gastro.jpg" alt="Gastroenterología">
+        <img src="../img/jpg/esp-gastro.jpg" alt="Gastroenterología">
         <h3>Gastroenterología</h3>
         <p class="specialty-p">Cuidamos tu sistema digestivo con diagnósticos y tratamientos precisos para que te sientas bien de adentro hacia afuera.</p>
         <a href="#" class="btn-vermas">Ver más</a>
@@ -68,7 +68,7 @@
 
       <!-- Reumatología -->
       <article class="specialty-card">
-        <img src="img/esp-reumato.jpg" alt="Reumatología">
+        <img src="../img/jpg/esp-reumato.jpg" alt="Reumatología">
         <h3>Reumatología</h3>
         <p class="specialty-p">Tratamos enfermedades musculoesqueléticas y autoinmunes para mejorar tu movilidad y calidad de vida.</p>
         <a href="#" class="btn-vermas">Ver más</a>
@@ -76,7 +76,7 @@
 
       <!-- Nutrición -->
       <article class="specialty-card">
-        <img src="img/esp-nutricion.jpg" alt="Nutrición">
+        <img src="../img/jpg/esp-nutricion.jpg" alt="Nutrición">
         <h3>Nutrición</h3>
         <p class="specialty-p">Planes personalizados para que tu alimentación sea aliada de tu salud y bienestar.</p>
         <a href="#" class="btn-vermas">Ver más</a>
@@ -84,7 +84,7 @@
 
       <!-- Cardiología -->
       <article class="specialty-card">
-        <img src="img/esp-cardio.jpg" alt="Cardiología">
+        <img src="../img/jpg/esp-cardio.jpg" alt="Cardiología">
         <h3>Cardiología</h3>
         <p class="specialty-p">Atención integral para cuidar tu corazón y prevenir enfermedades cardiovasculares.</p>
         <a href="#" class="btn-vermas">Ver más</a>
@@ -92,7 +92,7 @@
 
       <!-- Psiquiatría -->
       <article class="specialty-card">
-        <img src="img/esp-psiquiatria.jpg" alt="Psiquiatría">
+        <img src="../img/jpg/esp-psiquiatria.jpg" alt="Psiquiatría">
         <h3>Psiquiatría</h3>
         <p class="specialty-p">Atención especializada en salud mental, ofreciendo acompañamiento profesional y humano para tu bienestar emocional.</p>
         <a href="#" class="btn-vermas">Ver más</a>
@@ -100,7 +100,7 @@
 
       <!-- Infectología -->
       <article class="specialty-card">
-        <img src="img/esp-infectologia.jpg" alt="Infectología">
+        <img src="../img/jpg/esp-infectologia.jpg" alt="Infectología">
         <h3>Infectología</h3>
         <p class="specialty-p">Diagnóstico y manejo de enfermedades infecciosas, con un enfoque seguro, actualizado y cercano.</p>
         <a href="#" class="btn-vermas">Ver más</a>
@@ -118,14 +118,14 @@
       <h3>UBÍCANOS</h3>
       <div class="footer-item">
         <!-- icono: ubicacion.png -->
-        <img src="img/ubicacion.svg" alt="Ubicación" class="footer-icon">
+        <img src="../img/svg/ubicacion.svg" alt="Ubicación" class="footer-icon">
         <p>Av. Alberto Alexander 2476, Lince</p>
       </div>
 
       <h3 class="footer-subtitle">CORREO</h3>
       <div class="footer-item">
         <!-- icono: mensaje.png -->
-        <img src="img/mensaje.svg" alt="Correo" class="footer-icon">
+        <img src="../img/svg/mensaje.svg" alt="Correo" class="footer-icon">
         <p>medicalcenter@gmail.com</p>
       </div>
     </div>
@@ -135,7 +135,7 @@
       <h3>HORARIO DE ATENCIÓN</h3>
       <div class="footer-item">
         <!-- icono: hora.png -->
-        <img src="img/hora.svg" alt="Horario" class="footer-icon">
+        <img src="../img/svg/hora.svg" alt="Horario" class="footer-icon">
 
         <div class="footer-hours">
           <p>
@@ -156,26 +156,7 @@
   </div>
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  const overlay = document.getElementById('overlay');
-
-  if (!toggle || !nav || !overlay) return;
-
-  toggle.addEventListener('click', function () {
-    nav.classList.toggle('nav--open');
-    overlay.classList.toggle('overlay--active');
-  });
-
-  // CERRAR menú al hacer click en el overlay
-  overlay.addEventListener('click', function () {
-    nav.classList.remove('nav--open');
-    overlay.classList.remove('overlay--active');
-  });
-});
-</script>
+<script src="../scripts/scripts.js"></script>
 
 
 </body>
