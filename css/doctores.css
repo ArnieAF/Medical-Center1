@@ -367,6 +367,7 @@ header {
   flex-grow: 1;
   height: 100%; 
   width: 400px;
+  align-items: center;
   padding: 10px 0;
 }
 
@@ -401,6 +402,7 @@ header {
   font-size: 14px;  /* Reducir el tamaño del texto */
   text-align: center;  /* Centrado del texto */
   width: 197px;
+
   
 }
 
@@ -408,6 +410,13 @@ header {
   background: linear-gradient(90deg, #1D405F 17.78%, #0AF0A5 82.22%);  /* Efecto hover para el gradiente */
   cursor: pointer;
 }
+/* Seleccionar la primera tarjeta (Dr. Pierina Papadopulos) */
+.doctores-section .doctor-card:nth-child(3) .doctor-img {
+  /* Aquí puedes aplicar estilos específicos para la imagen */
+  margin-left: -10px;
+}
+
+/* Seleccionar la segunda tarjeta (Dr. María Renée) */
 
 
 
