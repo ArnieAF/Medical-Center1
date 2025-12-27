@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,232 +10,229 @@
   <link rel="stylesheet" href="../css/especialidades.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<div id="overlay"></div>
+
 <body>
-   <header>
-  <div class="container header-content">
-    <div class="logo">
-      <!-- Logo completo (desktop) -->
-      <img src="../img/png/logo.png" alt="Medical Center" class="logo-desktop">
-      <!-- Logo solo ícono (mobile) -->
-      <img src="../img/svg/logo-icon.svg" alt="Medical Center" class="logo-mobile">
+  <div id="overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <img src="../img/png/logo.png" alt="Medical Center" class="logo-desktop">
+        <img src="../img/svg/logo-icon.svg" alt="Medical Center" class="logo-mobile">
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="doctores.html">Doctores</a>
+        <a href="tienda.html">Tienda</a>
+      </nav>
+
+      <a href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." class="btn-cita" target="_blank" rel="noopener">
+        <img src="../img/png/wsp_logo.png" alt="">
+        Agenda una cita
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <img src="../img/svg/menu.svg" alt="Menú">
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-nosotros">
+    <img class="hero-img" src="../img/jpg/toma_nota.jpg" alt="Equipo Médico">
+    <div class="hero-text">
+      <h1><span class="ciencia-blanca">CIENCIA QUE CUIDA, </span><span class="atencion-verde">ATENCIÓN QUE ABRAZA</span></h1>
+      <p>Cuidamos tu salud con ciencia, ética y calidez humana</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-content">
+      <h2>¿QUIÉNES SOMOS?</h2>
+      <p>Unimos conocimiento médico y atención humana para cuidar de ti.</p>
+      <p>
+        Ofrecemos especialidades en
+        <span class="especialidad">Gastroenterología</span>,
+        <span class="especialidad">Reumatología</span>,
+        <span class="especialidad">Nutrición</span>,
+        <span class="especialidad">Cardiología</span>,
+        <span class="especialidad">Psiquiatría</span> e
+        <span class="especialidad">Infectología</span>, siempre con el compromiso
+        de escucharte, comprenderte y acompañarte hacia una mejor calidad de vida.
+      </p>
+    </div>
+    <img src="../img/png/doctores.png" alt="Equipo médico" class="about-img">
+  </section>
+
+  <!-- Specialties Section -->
+  <section class="specialties">
+    <div class="specialties-container">
+      <h2 class="specialties-title">NUESTRAS ESPECIALIDADES</h2>
+      <div class="specialties-grid">
+        <article class="specialty-card">
+          <img src="../img/jpg/esp-gastro.jpg" alt="Gastroenterología">
+          <h3>Gastroenterología</h3>
+          <a href="#" class="btn-vermas">Ver más</a>
+        </article>
+        <article class="specialty-card">
+          <img src="../img/jpg/esp-reumato.jpg" alt="Reumatología">
+          <h3>Reumatología</h3>
+          <a href="#" class="btn-vermas">Ver más</a>
+        </article>
+        <article class="specialty-card">
+          <img src="../img/jpg/esp-nutricion.jpg" alt="Nutrición">
+          <h3>Nutrición</h3>
+          <a href="#" class="btn-vermas">Ver más</a>
+        </article>
+        <article class="specialty-card">
+          <img src="../img/jpg/esp-cardio.jpg" alt="Cardiología">
+          <h3>Cardiología</h3>
+          <a href="#" class="btn-vermas">Ver más</a>
+        </article>
+        <article class="specialty-card">
+          <img src="../img/jpg/esp-psiquiatria.jpg" alt="Psiquiatría">
+          <h3>Psiquiatría</h3>
+          <a href="#" class="btn-vermas">Ver más</a>
+        </article>
+        <article class="specialty-card">
+          <img src="../img/jpg/esp-infectologia.jpg" alt="Infectología">
+          <h3>Infectología</h3>
+          <a href="#" class="btn-vermas">Ver más</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why">
+    <h2 class="why-title">¿POR QUÉ ELEGIRNOS?</h2>
+    <div class="why-grid">
+      <article class="why-card why-card--blue">
+        <img src="../img/svg/lupa.svg" class="why-icon" alt="Diagnóstico preciso">
+        <h3>Diagnóstico Preciso</h3>
+        <p>
+          Evaluamos cada caso con rigurosidad médica y
+          tecnología actualizada para brindarte la mejor atención.
+        </p>
+      </article>
+      <article class="why-card why-card--green">
+        <img src="../img/svg/corazon.svg" class="why-icon" alt="Atención integral">
+        <h3>Atención Integral</h3>
+        <p>
+          No solo tratamos síntomas, cuidamos tu bienestar
+          físico y emocional en cada consulta.
+        </p>
+      </article>
+      <article class="why-card why-card--light">
+        <img src="../img/svg/manos.svg" class="why-icon" alt="Trato humano y cercano">
+        <h3>Trato humano y cercano</h3>
+        <p>
+          Escuchamos, comprendemos y cuidamos de ti con
+          empatía y respeto.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2 class="testimonials-title">TESTIMONIOS</h2>
+    <div class="testimonials-wrapper">
+      <button class="testimonial-arrow arrow-left" aria-label="Testimonio anterior">
+        <img src="../img/svg/flecha-izq.svg" alt="Anterior">
+      </button>
+
+      <article class="testimonial-card">
+        <img src="../img/png/jorge.png" alt="Jorge, 62 años" class="testimonial-photo">
+        <p class="testimonial-text">
+          “En Medical Center me sentí cuidado y respetado en todo momento.”
+        </p>
+        <p class="testimonial-name">— Jorge, 62 años</p>
+      </article>
+
+      <article class="testimonial-card">
+        <img src="../img/png/helena.png" alt="Helena, 48 años" class="testimonial-photo">
+        <p class="testimonial-text">
+          “Desde la primera consulta sentí que me escuchaban de verdad.
+          Me explicaron todo con paciencia y claridad.”
+        </p>
+        <p class="testimonial-name">— Helena, 48 años</p>
+      </article>
+
+      <article class="testimonial-card">
+        <img src="../img/png/alfonso.png" alt="Alfonso, 42 años" class="testimonial-photo">
+        <p class="testimonial-text">
+          “Su trato es humano y profesional. Me ayudaron a entender mi diagnóstico
+          y me sentí acompañado todo el tiempo.”
+        </p>
+        <p class="testimonial-name">— Alfonso, 42 años</p>
+      </article>
+
+      <button class="testimonial-arrow arrow-right" aria-label="Siguiente testimonio">
+        <img src="../img/svg/flecha-der.svg" alt="Siguiente">
+      </button>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-cita">
+    <div class="cta-cita-content">
+      <h2>
+        AGENDA UNA CITA
+        <span>HOY MISMO</span>
+      </h2>
+      <p>Tu salud no espera. Reserva fácil y rápido en línea.</p>
+      <a href="#" class="cta-cita-btn">Agendar ahora</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>UBÍCANOS</h3>
+        <div class="footer-item">
+          <img src="../img/svg/ubicacion.svg" alt="Ubicación" class="footer-icon">
+          <p>Av. Alberto Alexander 2476, Lince</p>
+        </div>
+
+        <h3 class="footer-subtitle">CORREO</h3>
+        <div class="footer-item">
+          <img src="../img/svg/mensaje.svg" alt="Correo" class="footer-icon">
+          <p>medicalcenter@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>HORARIO DE ATENCIÓN</h3>
+        <div class="footer-item">
+          <img src="../img/svg/hora.svg" alt="Horario" class="footer-icon">
+          <div class="footer-hours">
+            <p>
+              Lunes a Viernes:<br>
+              <span>09:00 am - 7:00 pm</span>
+            </p>
+            <p>
+              Sábados y Domingos:<br>
+              <span>12:00 pm - 3:00 pm</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <nav class="nav">
-      <a href="index.html" class="active">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="especialidades.html" >Especialidades</a>
-                <a href="doctores.html">Doctores</a>
-                <a href="tienda.html">Tienda</a>
-    </nav>
+    <div class="footer-bottom">
+      Todos los derechos reservados &copy; 2025
+    </div>
+  </footer>
 
-   <a 
-  href="https://wa.me/51987427807?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Medical%20Center." 
-  class="btn-cita"
-  target="_blank"
-  rel="noopener"
->
-  <img src="../img/png/wsp_logo.png" alt="">
-  Agenda una cita
-</a>
-
-    <!-- Botón hamburguesa (solo se verá en mobile) -->
-    <button class="nav-toggle" aria-label="Abrir menú">
-      <img src="../img/svg/menu.svg" alt="Menú">
-    </button>
-  </div>
-</header>
-
-<section class="hero-nosotros">
-  <img class="hero-img" src="../img/jpg/toma_nota.jpg" alt="Equipo Médico">
-
-  <div class="hero-text">
-    <h1><span class="ciencia-blanca">CIENCIA QUE CUIDA, </span><span class="atencion-verde">ATENCIÓN QUE ABRAZA</span></h1>
-    <p>Cuidamos tu salud con ciencia, ética y calidez humana</p>
-  </div>
-</section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about">
-        <div class="about-content">
-            <h2>¿QUIÉNES SOMOS?</h2>
-            <p>Unimos conocimiento médico y atención humana para cuidar de ti.</p>
-            <p>
-                Ofrecemos especialidades en
-                <span class="especialidad">Gastroenterología</span>,
-                <span class="especialidad">Reumatología</span>,
-                <span class="especialidad">Nutrición</span>,
-                <span class="especialidad">Cardiología</span>,
-                <span class="especialidad">Psiquiatría</span> e
-                <span class="especialidad">Infectología</span>, siempre con el compromiso
-                de escucharte, comprenderte y acompañarte hacia una mejor calidad de vida.
-            </p>
-        </div>
-        <img src="../img/png/doctores.png" alt="Equipo médico" class="about-img">
-    </section>
-
-    <!-- SPECIALTIES SECTION -->
-    <section class="specialties">
-        <div class="specialties-container">
-            <h2 class="specialties-title">NUESTRAS ESPECIALIDADES</h2>
-            <div class="specialties-grid">
-                <article class="specialty-card">
-                    <img src="../img/jpg/esp-gastro.jpg" alt="Gastroenterología">
-                    <h3>Gastroenterología</h3>
-                    <a href="#" class="btn-vermas">Ver más</a>
-                </article>
-                <article class="specialty-card">
-                    <img src="../img/jpg/esp-reumato.jpg" alt="Reumatología">
-                    <h3>Reumatología</h3>
-                    <a href="#" class="btn-vermas">Ver más</a>
-                </article>
-                <article class="specialty-card">
-                    <img src="../img/jpg/esp-nutricion.jpg" alt="Nutrición">
-                    <h3>Nutrición</h3>
-                    <a href="#" class="btn-vermas">Ver más</a>
-                </article>
-                <article class="specialty-card">
-                    <img src="../img/jpg/esp-cardio.jpg" alt="Cardiología">
-                    <h3>Cardiología</h3>
-                    <a href="#" class="btn-vermas">Ver más</a>
-                </article>
-                <article class="specialty-card">
-                    <img src="../img/jpg/esp-psiquiatria.jpg" alt="Psiquiatría">
-                    <h3>Psiquiatría</h3>
-                    <a href="#" class="btn-vermas">Ver más</a>
-                </article>
-                <article class="specialty-card">
-                    <img src="../img/jpg/esp-infectologia.jpg" alt="Infectología">
-                    <h3>Infectología</h3>
-                    <a href="#" class="btn-vermas">Ver más</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY CHOOSE US SECTION -->
-    <section class="why">
-        <h2 class="why-title">¿POR QUÉ ELEGIRNOS?</h2>
-        <div class="why-grid">
-            <article class="why-card why-card--blue">
-                <img src="../img/svg/lupa.svg" class="why-icon" alt="Diagnóstico preciso">
-                <h3>Diagnóstico Preciso</h3>
-                <p>
-                    Evaluamos cada caso con rigurosidad médica y
-                    tecnología actualizada para brindarte la mejor atención.
-                </p>
-            </article>
-            <article class="why-card why-card--green">
-                <img src="../img/svg/corazon.svg" class="why-icon" alt="Atención integral">
-                <h3>Atención Integral</h3>
-                <p>
-                    No solo tratamos síntomas, cuidamos tu bienestar
-                    físico y emocional en cada consulta.
-                </p>
-            </article>
-            <article class="why-card why-card--light">
-                <img src="../img/svg/manos.svg" class="why-icon" alt="Trato humano y cercano">
-                <h3>Trato humano y cercano</h3>
-                <p>
-                    Escuchamos, comprendemos y cuidamos de ti con
-                    empatía y respeto.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials">
-        <h2 class="testimonials-title">TESTIMONIOS</h2>
-        <div class="testimonials-wrapper">
-            <button class="testimonial-arrow arrow-left" aria-label="Testimonio anterior">
-                <img src="../img/svg/flecha-izq.svg" alt="Anterior">
-            </button>
-            
-            <article class="testimonial-card">
-                <img src="../img/png/jorge.png" alt="Jorge, 62 años" class="testimonial-photo">
-                <p class="testimonial-text">
-                    “En Medical Center me sentí cuidado y respetado en todo momento.”
-                </p>
-                <p class="testimonial-name">— Jorge, 62 años</p>
-            </article>
-            
-            <article class="testimonial-card">
-                <img src="../img/png/helena.png" alt="Helena, 48 años" class="testimonial-photo">
-                <p class="testimonial-text">
-                    “Desde la primera consulta sentí que me escuchaban de verdad.
-                    Me explicaron todo con paciencia y claridad.”
-                </p>
-                <p class="testimonial-name">— Helena, 48 años</p>
-            </article>
-            
-            <article class="testimonial-card">
-                <img src="../img/png/alfonso.png" alt="Alfonso, 42 años" class="testimonial-photo">
-                <p class="testimonial-text">
-                    “Su trato es humano y profesional. Me ayudaron a entender mi diagnóstico
-                    y me sentí acompañado todo el tiempo.”
-                </p>
-                <p class="testimonial-name">— Alfonso, 42 años</p>
-            </article>
-            
-            <button class="testimonial-arrow arrow-right" aria-label="Siguiente testimonio">
-                <img src="../img/svg/flecha-der.svg" alt="Siguiente">
-            </button>
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="cta-cita">
-        <div class="cta-cita-content">
-            <h2>
-                AGENDA UNA CITA
-                <span>HOY MISMO</span>
-            </h2>
-            <p>Tu salud no espera. Reserva fácil y rápido en línea.</p>
-            <a href="#" class="cta-cita-btn">Agendar ahora</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-col">
-                <h3>UBÍCANOS</h3>
-                <div class="footer-item">
-                    <img src="../img/svg/ubicacion.svg" alt="Ubicación" class="footer-icon">
-                    <p>Av. Alberto Alexander 2476, Lince</p>
-                </div>
-                <h3 class="footer-subtitle">CORREO</h3>
-                <div class="footer-item">
-                    <img src="../img/svg/mensaje.svg" alt="Correo" class="footer-icon">
-                    <p>medicalcenter@gmail.com</p>
-                </div>
-            </div>
-            
-            <div class="footer-col">
-                <h3>HORARIO DE ATENCIÓN</h3>
-                <div class="footer-item">
-                    <img src="../img/svg/hora.svg" alt="Horario" class="footer-icon">
-                    <div class="footer-hours">
-                        <p>
-                            Lunes a Viernes:<br>
-                            <span>09:00 am - 7:00 pm</span>
-                        </p>
-                        <p>
-                            Sábados y Domingos:<br>
-                            <span>12:00 pm - 3:00 pm</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            Todos los derechos reservados &copy; 2025
-        </div>
-    </footer>
-
-    <!-- SCRIPTS -->
-    <script src="../scripts/scripts.js"></script>
+  <!-- Scripts -->
+  <script src="../scripts/scripts.js"></script>
 </body>
+
 </html>

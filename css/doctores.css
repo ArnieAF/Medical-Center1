@@ -1,6 +1,4 @@
-/* ============================
-   HEADER
-   ============================ */
+/* Header */
 header {
   width: 100%;
   background: #ffffff;
@@ -40,9 +38,7 @@ header {
   display: block;
 }
 
-/* ============================
-   NAVIGATION
-   ============================ */
+/* Nav */
 .nav-toggle {
   display: none;
   background: none;
@@ -72,9 +68,7 @@ header {
   color: #1E5542;
 }
 
-/* ============================
-   BUTTONS
-   ============================ */
+/* Buttons */
 .btn-cita {
   width: 262px;
   height: 61px;
@@ -296,10 +290,9 @@ header {
   display: flex;
 }
 /* Doctores Section */
-/* Doctores Section */
 .doctores-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
   margin: 50px auto;
   max-width: 1200px;
@@ -352,11 +345,11 @@ header {
 
 
 .doctor-img {
-  width: 100%;  /* Ajusté el ancho de la imagen */
-  height: 100%; /* Ajusté la altura de la imagen */
-  object-fit: contain;  /* Asegura que la imagen se ajuste correctamente sin recortarse */
+  width: 100%;  
+  height: 100%; 
+  object-fit: contain;  
   margin-top: 20px;
-  margin-left: -57px;  /* Separación entre la imagen y el texto */
+  margin-left: -57px;  
 }
 
 .doctor-info {
@@ -374,50 +367,47 @@ header {
 /* Texto */
 .doctor-info h3 {
   margin: 0;
-  font-size: 40px;  /* Ajuste de tamaño de fuente */
-  font-weight: 700;  /* Peso de fuente */
-  color: #FFFFFF;  /* Color blanco */
-  line-height: 1.2;  /* Ajuste de altura de línea */
-  text-align: center;  /* Centrado del texto */
+  font-size: 40px;  
+  font-weight: 700; 
+  color: #FFFFFF;  
+  line-height: 1.2;  
+  text-align: center;  
 }
 
 .doctor-info p {
   margin: 5px 0;
-  font-size: 20px;  /* Ajuste del tamaño de la especialidad */
-  font-weight: 700;  /* Peso del texto */
-  color: #C1DD9E;  /* Color del texto de la especialidad */
-  text-align: center;  /* Centrado del texto */
+  font-size: 20px;  
+  font-weight: 700;  
+  color: #C1DD9E;  
+  text-align: center;  
 }
 
 /* Botón */
 .btn-ver-perfil {
   display: inline-block;
-  margin-top: 15px;  /* Espacio entre el texto y el botón */
-  padding: 8px 16px;  /* Reducir el espacio interno para hacerlo más pequeño */
+  margin-top: 15px;  
+  padding: 8px 16px;  
   background: linear-gradient(90deg, #C1DD9E 0%, #D9EAC4 100%);
-  color: #FFFFFF;  /* Color del texto */
-  text-decoration: none;  /* Eliminar subrayado */
-  border-radius: 20px;  /* Bordes redondeados */
-  font-weight: 600;  /* Peso de la fuente */
-  font-size: 14px;  /* Reducir el tamaño del texto */
-  text-align: center;  /* Centrado del texto */
+  color: #FFFFFF;  
+  text-decoration: none;  
+  border-radius: 20px; 
+  font-weight: 600;  
+  font-size: 14px;  
+  text-align: center;  
   width: 197px;
 
   
 }
 
 .btn-ver-perfil:hover {
-  background: linear-gradient(90deg, #1D405F 17.78%, #0AF0A5 82.22%);  /* Efecto hover para el gradiente */
+  background: linear-gradient(90deg, #1D405F 17.78%, #0AF0A5 82.22%);  
   cursor: pointer;
 }
-/* Seleccionar la primera tarjeta (Dr. Pierina Papadopulos) */
+
 .doctores-section .doctor-card:nth-child(3) .doctor-img {
-  /* Aquí puedes aplicar estilos específicos para la imagen */
+
   margin-left: -10px;
 }
-
-/* Seleccionar la segunda tarjeta (Dr. María Renée) */
-
 
 
 /* Mobile Responsiveness */

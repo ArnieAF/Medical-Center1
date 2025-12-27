@@ -1,6 +1,4 @@
-/* ============================
-   SPECIALTIES SECTION
-   ============================ */
+/* Specialities section */
 .specialties {
   background: #ffffff;
   padding: 60px 0 80px;
@@ -80,21 +78,21 @@
   margin-top: 20px;
 }
 
-/* Responsividad */
+/* Responsive */
 @media (max-width: 856px) {
   .specialties-grid {
-    grid-template-columns: 1fr; /* Poner las tarjetas en una columna */
-    gap: 30px 50px; /* Ajustar el espacio entre tarjetas */
+    grid-template-columns: 1fr; 
+    gap: 30px 50px; 
   }
 
   .specialty-card {
-    flex-direction: column; /* Poner imagen y texto en columna en pantallas pequeñas */
+    flex-direction: column; 
     align-items: center;
   }
 
   .specialty-card img {
-    width: 100%; /* Imagen ocupa el 100% del ancho de la tarjeta */
-    margin-right: 0; /* Eliminar el margen derecho en pantallas pequeñas */
+    width: 100%; 
+    margin-right: 0; 
   }
 
   .specialty-card h3 {
